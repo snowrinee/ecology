@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>와서 구경하세요 test</title>
+	<style>
+		*{margin:0px; padding:0px;}
+		body, html{width:100%; height:100%; font-family: "arial";}
+		ul,li{list-style: none;}
+		a{text-decoration: none; color:#333;}
+		.wrap{width:100%; min-width:1200px;}
+		.inner{position:relative; width:1200px; margin:0px auto; }
+		#header{width:100%; height:100px;}
+		#header .gnb{width:500px; height:100px; position:absolute; top:0; left:50%; margin-left:-250px;}
+		#header .gnb li{float:left; line-height: 100px;}
+		#header .gnb li a{font-size:15px; padding:0 24px; font-weight:bold;}
+		#main{width:100%;}
+		#main .visual{width:100%; height:1000px;background-color:#d5cdc8;}
+		#main .visual .inner{box-sizing: border-box; padding-top:80px;}
+		#main .work .inner h2{text-align: center; padding:80px 0; padding-bottom:0;}
+
+		a.item{display: block; width:380px; height:280px; background:#fff; float:left; margin-top:60px; margin-right:20px; position:relative;}
+		a.item:hover:after{content: " ";  display: block; position:absolute; top:0; left:0; background:#262626; opacity: 0.5; width:100%; height:100%;}
+		a.item img{display: block; width:100%; height:280px;}
+		a.item:nth-child(9){margin-bottom:100px;}
+		.skip{text-indent: -9999px; overflow: hidden;}
+		
+		#footer{width:100%; height:200px; background:#f4f4f4; clear:both;}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<header id="header">
+			<nav class="gnb">
+				<ul>
+					<li><a href="#">home</a></li>
+					<li><a href="#">resume</a></li>
+					<li><a href="#">ability</a></li>
+					<li><a href="#">works</a></li>
+					<li><a href="#">contactUs</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section id="main">
+			<div class="visual">
+				<div class="inner">
+					<h1 class="skip">박서린임</h1>
+					<span><img src="./img/vsTit.png" alt="이미지"></span>
+				</div>
+			</div>
+			<div class="work">
+				<div class="inner">
+				<h2>작업물입니다^^</h2>
+					<a href="http://seoulbit02.dothome.co.kr/file1" class="item item1" target="blank">
+						<div class="itemWrap"><img src="./img/file1.png" alt=""><span></span></div>
+					</a>
+					<a href="http://seoulbit02.dothome.co.kr/file2" class="item item2" target="blank">
+						<div class="itemWrap"><img src="./img/file2.png" alt=""><span></span></div>
+					</a>
+					<a href="http://seoulbit02.dothome.co.kr/file3" class="item item3" target="blank">
+						<div class="itemWrap"><img src="./img/file3.png" alt=""><span></span></div>
+					</a>
+					<a href="http://seoulbit02.dothome.co.kr/file4" class="item item4" target="blank">
+						<div class="itemWrap"><img src="./img/file4.png" alt=""><span></span></div>
+					</a>
+					<a href="http://seoulbit02.dothome.co.kr/file5" class="item item5" target="blank">
+						<div class="itemWrap"><img src="./img/file5.png" alt=""><span></span></div>
+					</a>
+					<a href="http://seoulbit02.dothome.co.kr/file6" class="item item6" target="blank">
+						<div class="itemWrap"><img src="./img/file6.png" alt=""><span></span></div>
+					</a>
+					<a href="http://seoulbit02.dothome.co.kr/file7" class="item item7" target="blank">
+						<div class="itemWrap"><img src="./img/file7.png" alt=""><span></span></div>
+					</a>
+					<a href="http://seoulbit02.dothome.co.kr/file8" class="item item8" target="blank">
+						<div class="itemWrap"><img src="./img/file8.png" alt=""><span></span></div>
+					</a>
+					<a href="http://seoulbit02.dothome.co.kr/file9" class="item item9" target="blank">
+						<div class="itemWrap"><img src="./img/file9.png" alt=""><span></span></div>
+					</a>
+				</div>
+			</div>
+		</section>
+		<footer id="footer">
+			<div class="adress">
+				<p>박서린의포트폴리오</p>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
