@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>서울남산타워</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<header id="header">
+		<div class="inner">
+			<h1 class="logo">
+				<a href="index.html"><img src="./img/logo.png" alt=""></a>
+			</h1>
+			<ul class="gnb">
+				<li><a href="brandstory.html">남산서울타워</a></li>
+				<li><a href="tourGuide.html">투어가이드</a></li>
+				<li><a href="floorInfo.html">층별소개</a></li>
+				<li><a href="mediaCenter.html">미디어센터</a></li>
+				<li><a href="rent.html">대관안내</a></li>
+			</ul>
+			<div class="icon">
+				<a href="http://www.facebook.com/lovenseoultower" class="facebook" target="_blank">
+					<img src="./img/facebook_ico.svg" alt="페이스북">
+				</a>
+				<a href="https://www.instagram.com/namsanseoultower" target="_blank" class="instagram">
+					<img src="./img/insta_ico.svg" alt="인스타그램">
+				</a>
+				<span class="search"><img src="./img/search_ico.svg" alt="검색"></span>
+			</div>
+		</div>
+	</header>
+	<section id="main">
+		<div class="subBg">
+			<img src="./img/subBg.png" alt="남산배경" style="width:100%; height:100%;">
+		</div>
+		<div class="navWrap">
+			<ul class="inner">
+				<li class="on"><a href="brandstory.html">층별소개</a></li>
+				<li><a href="history.html">서울타워플라자</a></li>
+				<li><a href="tower.html">N서울타워</a></li>
+				<li><a href="attraction.html">쿠폰</a></li>
+			</ul>
+		</div>
+		<div class="subcontents">
+			<h3 class="intro_tit">층별소개</h3>
+            <img src="./img/floorInfo.png" alt="" class="floorInfo">
+        </div>
+		
+		
+	</section>
+	<footer id="footer">
+		<div class="fnb">
+			<div class="inner">
+				<ul class="fnb_wrap">
+					<li><a href="#" class="bd0">회사소개</a></li>
+					<li><a href="#">이용약관</a></li>
+					<li><a href="#">개인정보처리방침</a></li>
+					<li><a href="#">고객센터</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="fnb_adress">
+			<div class="inner">
+				<p class="adress">04340 서울특별시 용산구 남산공원길 105 남산서울타워  대표자: 최남수  팩스: 02-756-2486  사업자등록번호: 102-81-32883</p>
+				<p class="copyright">마케팅·홍보촬영 문의: jkkim0917@ytn.co.kr<br>COPYRIGHT© NAMSAN SEOUL TOWER, ALL RIGHTS RESERVED.<br>본 사이트의 콘텐츠는 저작권법의 보호를 받는바, 무단 전재, 복사, 배포 등을 금합니다.
+				</p>
+			</div>
+		</div>
+	</footer>
+</body>
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+	function Slider(element) {
+		var self = this;
+		var el = $(element);
+		var item = el.find('.item');
+		var index = 0;
+		var current = 0;
+		var prev_btn = el.find('.prev_btn');
+		var next_btn = el.find('.next_btn');
+		var pager = $('.pager');
+		item.eq(index).css({
+			top: 0,
+			left: 0
+		});
+		prev_btn.on('click', function() {
+			if (!item.is(':animated')) {
+				self.move(-1);
+			}
+		});
+		next_btn.on('click', function() {
+			if (!item.is(':animated')) {
+				self.move(1);
+			}
+		});
+		pager.on('click', function() {
+			if (!item.is(':animated')) {
+				var pagerIndex = $(this).index();
+				if (pagerIndex > current) {
+					self.moveNext(pagerIndex);
+				} else if (pagerIndex < current) {
+					self.movePrev(pagerIndex);
+				}
+				self.activePagerItem(pagerIndex);
+			}
+		});
+		self.movePrev = function(moveIndex) {
+			item.eq(current).animate({
+				left: '100%'
+			});
+			item.eq(moveIndex).css({
+				left: '-100%'
+			}).animate({
+				left: '0'
+			});
+		}
+		self.moveNext = function(moveIndex) {
+			item.eq(current).animate({
+				left: '-100%'
+			});
+			item.eq(moveIndex).css({
+				left: '100%'
+			}).animate({
+				left: '0'
+			});
+		}
+		self.activePagerItem = function(activeIndex) {
+			pager.eq(activeIndex).addClass('active').siblings().removeClass('active');
+			item.eq(activeIndex).addClass('active').siblings().removeClass('active');
+			current = activeIndex;
+		}
+		self.move = function(dir) {
+			index = current + dir;
+			if (0 > index) {
+				index = item.length - 1;
+			}
+			if (index > item.length - 1) {
+				index = 0;
+			}
+			if (dir == -1) {
+				self.movePrev(index);
+			} else {
+				self.moveNext(index);
+			}
+			self.activePagerItem(index);
+		}
+	}
+	var slider = new Slider('.slider');
+</script>
+<script>
+	$(".navWrap > li").click(function(){
+		$(this).addClass("on");
+	});
+</script>
+</html>
