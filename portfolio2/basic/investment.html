@@ -1,0 +1,422 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+	a:hover{text-decoration: underline;}
+	/*header*/
+	*{font-family: 'NanumGothic';}
+#content{width:100%;clear: both;}
+#content .company_bg{display: block; width:100%;height: 500px;background:url('./img/company_bg.jpg');background-repeat: no-repeat;background-position: center;border:1px solid #ddd;clear: both;}
+
+#content .nav_sub{width:100%;height:60px;border-bottom: 1px solid #ddd;position: relative;margin-top: -4px;}
+#content .nav_sub label{width:200px;height:100%;border-left: 1px solid #ddd;border-right: 1px solid #ddd;display: block; background:url('./img/bottom_arrow.png');background-repeat: no-repeat;background-position:175px center;box-sizing: border-box; line-height: 58px; text-indent: 20px;}
+#content .nav_sub label[for="nav_ck1"]{position:absolute;top:0;left: 400px;}
+#content .nav_sub label[for="nav_ck2"]{border-left:0; position:absolute;top: 0;left: 600px;}
+#content .nav_sub label a{color: black;}
+#content .nav_sub input{display: none;}
+#content .nav_sub a.home{width:21px;height:17px;display: block;background:url('./img/home_ico.png');background-repeat: no-repeat;background-position: center;position: absolute;top: 20px;}
+#content .nav_sub .nav_list1{height:200px; background: #133990; width:200px;position: absolute;top: 60px;z-index: 200;left: 400px;}
+#content .nav_sub li{width:100%; text-indent:20px;}
+#content .nav_sub li a{color:white;}
+#content .nav_sub .nav_list2{background: #133990; position: absolute;top: 60px;z-index: 200;left: 600px;}
+#content .nav_sub ul li{clear:both; line-height:50px;}
+#content .nav_sub ul li a{display: block; width:200px; height:50px;}
+#content .nav_sub ul li:hover{background:#0c2e7b;}
+#nav_ck1 ~ .nav_list1{display: none;}
+#nav_ck1:checked ~ .nav_list1{display:block; height:auto;}
+#nav_ck2 ~ .nav_list2{display: none;}
+#nav_ck2:checked ~ .nav_list2{display:block; height:auto;}
+	
+	
+	
+.company_info{width:100%; height:100%;}	
+.company_info .company_infoTit{font-size:20px; font-weight:500; margin-top:100px; letter-spacing: -1.2px;}
+.company_info .company_infoTit:after{content: " "; display: block; width:40px; height:3px; background-color:#233499; margin:10px 0px;}
+.company_info .company_centerTit{width:100%; text-align: center; font-family: "Gotham"; font-size:22px; font-weight:400; letter-spacing: -1.2px; margin-top:150px;}	
+.company_info .company_midTit{width:100%; text-align: center; font-size:26px; font-weight:400; margin-top:20px;}
+.company_info .company_midTit strong{color:#233499; font-weight:500;}
+	
+.company_info .company_centerMidTit{width:100%; text-align: center; font-size:20px; font-weight:400; letter-spacing: -0.8px; margin-top:20px; line-height:30px;}
+
+.company_info .tabmenu input{display: none;}
+.company_info .tabmenu{width:1200px; margin:0px auto;}
+.company_info .tabmenu label{display: block; width:600px; height:60px; border:1px solid #ccc; float:left; box-sizing: border-box; text-align: center; line-height: 60px;}
+.company_info .tabmenu{margin-top:50px;}
+.company_info .tab_content1,.company_info .tab_content2{clear:both;}
+.company_info label[for=tab2]{border-left:0;}	
+#tab1 ~ .tab_content1{display: none;}
+#tab2 ~ .tab_content2{display: none;}
+#tab1:checked ~ .tab_content1{display: block;}
+#tab2:checked ~ .tab_content2{display: block;}
+#tab1:checked ~ label[for=tab1],#tab2:checked ~ label[for=tab2]{background:#233499; color:white;}
+	
+	
+.company_info .tab_content1{width:1200px; height:1000px;}
+.company_info .invest1{}	
+.company_info .invest1 .subject{clear:both; position:relative; width:100%; height:100px;}
+.company_info .invest1 .tab_Tit{font-size:20px; font-weight:500; position:absolute; bottom:15px; left:0;}	
+.company_info .invest1 .tab_MidTit{font-size:14px; font-weight:500; color:#8a8a8a; position:absolute; right:0; bottom:15px;}	
+.company_info .invest1 .table1{width:600px; border-spacing:  0;border-collapse:  collapse; float:left;}
+.company_info .invest1 .table2{width:600px; border-spacing:  0;border-collapse:  collapse; float:right;}
+.company_info .invest1 th,td{height:50px;border-bottom: 1px solid #cccccc; text-align: center;}
+.company_info .invest1 .first{border-top: 2px solid #262626;}
+.company_info .invest1 td:nth-child(1){width: 200px;font-size: 15px;color:#262626; font-weight:500; background:#f4f4f4;}
+.company_info .invest1 td:nth-child(2){width: 300px;text-indent: 40px;text-align: left; font-size:15px;font-weight:bold;color:#333;letter-spacing: -1.0px; font-weight:400;}
+.company_info .tab_content1 td.last{height:101px;}
+
+	
+.company_info .tab_content2{width:100%; height:520px;}
+.company_info .invest2{}		
+.company_info .invest2 .subject2{clear:both; position:relative; width:100%; height:100px;}
+.company_info .invest2 .tab_Tit{font-size:20px; font-weight:500; position:absolute; bottom:15px; left:0;}
+.company_info .invest2 .tab_MidTit{font-size:14px; font-weight:500; color:#8a8a8a; position:absolute; right:0; bottom:15px;}	
+.company_info .invest2 .table3{width:1200px; border-spacing:  0;border-collapse:  collapse; float:right;}
+.company_info .invest2 .table3 th,.table3 td{height:50px;text-align: center; border-right:1px solid #ccc; border-bottom:1px solid #ccc;}
+.company_info .invest2 .table3 .first{border-top: 2px solid #262626;}
+.company_info .invest2 .table3 thead td{font-weight: 500; background:#f4f4f4;}
+.company_info .invest2 .table3 td:nth-child(4){border-right:0;}
+.company_info .invest2 .table3 .col1{width:200px;}	
+.company_info .invest2 .table3 .col2{width:300px;}	
+.company_info .invest2 .table3 .col3{width:300px;}	
+.company_info .invest2 .table3 .col4{width:400px;}	
+.company_info .invest2 .table3 tfoot{font-weight:500;}
+	
+.tab_content2 .notice1{width:100%;}
+.tab_content2 .notice1 .subject2{clear:both; position:relative; width:100%; height:100px;}
+.tab_content2 .notice1 .tab_Tit{font-size:20px; font-weight:500; position:absolute; bottom:15px; left:0;}
+.tab_content2 .notice1 .tab_MidTit{font-size:14px; font-weight:500; color:#8a8a8a; position:absolute; right:0; bottom:15px;}	
+.tab_content2 .notice1 .table4{width:1200px; border-spacing:  0;border-collapse:  collapse; float:right;}
+.tab_content2 .notice1 .table4 th,.table4 td{height:50px;text-align: center; border-right:1px solid #ccc; border-bottom:1px solid #ccc; font-size:15px;}
+.tab_content2 .notice1 .table4 .first{border-top: 2px solid #262626;}
+.tab_content2 .notice1 .table4 thead td{font-weight: 500; background:#f4f4f4;}
+.tab_content2 .notice1 .table4 td > a{color:black;}
+.tab_content2 .notice1 .table4 td:nth-child(6){border-right:0;}
+.tab_content2 .notice1 .table4 td .download{display: block;background:url('./img/download.png');background-repeat: no-repeat;/* margin-top:20px; */margin-left: 18px;}
+.tab_content2 .notice1 .table4 .col1{width:100px;}	
+.tab_content2 .notice1 .table4 .col2{width:400px;}	
+.tab_content2 .notice1 .table4 .col3{width:100px;}	
+.tab_content2 .notice1 .table4 .col4{width:200px;}	
+.tab_content2 .notice1 .table4 .col5{width:100px;}	
+.tab_content2 .notice1 .table4 .col6{width:100px;}	
+.tab_content2 .notice1 .table4 tfoot{font-weight:500;}
+</style>
+<body>
+	<div class="wrap">		<header id="header">
+				<div class="gnb">
+					<h1><a href="index.html"><img src="./img/logo.png" alt="TBHGLOBAL"></a></h1>
+					<ul class="gnb_wrap">
+						<li><a href="company.html">회사소개</a>
+							<ul class="sub">
+								<li><a href="company.html">회사소개</a></li>
+								<li><a href="philosophy.html">경영이념</a></li>
+								<li><a href="notice.html">알림마당</a></li>
+								<li><a href="contactus.html">오시는길</a></li>
+							</ul>
+						</li>
+						<li><a href="csr.html">사회공헌</a>
+							<ul class="sub">
+								<li><a href="csr.html">사회공헌</a></li>
+							</ul>
+						</li>
+						<li><a href="investment.html">투자정보</a>
+							<ul class="sub">
+								<li><a href="investment.html">투자정보</a></li>
+							</ul>
+						</li>
+						<li><a href="recruit.html">인재채용</a>
+							<ul class="sub">
+								<li><a href="recruit.html">인재채용</a></li>
+							</ul>
+						</li>
+						<li><a href="community.html">미디어센터</a>
+							<ul class="sub">
+								<li><a href="community.html">미디어센터</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div class="language">
+						<select id="lang" title="select lang">
+							<option selected="selected">KOR</option>
+							<option>ENG</option>
+							<option>JPN</option>
+							<option>CHN</option>
+							<option>GER</option>
+						</select>
+					</div>
+				</div>
+
+		</header>
+		<section id="content">
+			<img src="./img/csr_bg.jpg" alt="회사사진" width="100%" height="500px" >
+			<div class="nav_sub">
+               	<div class="inner">
+                	<a href="index.html" class="home"></a>
+					<input type="radio" name="nav_ck" id="nav_ck1">
+					<label for="nav_ck1"><a href="investment.html">투자정보</a></label>
+					<div class="nav_list1">
+						<ul>
+							<li><a href="company.html">회사소개</a></li>
+							<li><a href="csr.html">사회공헌</a></li>
+							<li><a href="recruit.html">인재채용</a></li>
+							<li><a href="community.html">미디어센터</a></li>
+						</ul>
+					</div>
+					<input type="radio" name="nav_ck" id="nav_ck2">
+					<label for="nav_ck2"><a href="csr.html">투자정보</a></label>
+					<div class="nav_list2">
+						<ul>
+							<li><a href="csr.html">투자정보</a></li>
+						</ul>
+					</div>
+				</div>	
+			</div>
+			<section class="company_info">
+				<div class="inner">
+					<h3 class="company_infoTit">투자정보</h3>
+					<h3 class="company_centerTit">Inverstor relations</h3>
+					<h4 class="company_midTit">투자정보</h4>
+					<h4 class="company_centerMidTit">(주)티비에이치글로벌의 주요 경영내용, 주식정보에 대해 포괄적인 정보를 투명하게 알려드립니다.</h4>
+					<div class="tabmenu">
+						<input type="radio" name="rdo" id="tab1" checked>
+						<input type="radio" name="rdo" id="tab2">
+						<label for="tab1">투자개요</label>
+						<label for="tab2">전자공고</label>
+						<div class="tab_content1">
+							<div class="invest1">
+								<ul class="subject">
+									<li class="tab_Tit">(주)티비에이치글로벌</li>
+									<li class="tab_MidTit">상장기업 (표준종목코드 - 084870)</li>
+								</ul>
+								<table class="table1">	
+									<thead>
+									<tr class="first">
+										<td>회사명</td>
+										<td>(주)티비에이치글로벌</td>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td>설립일</td>
+										<td>2000년 12월 22일</td>
+									</tr>
+									<tr>
+										<td>상장일</td>
+										<td>2005년 12월 19일</td>
+									</tr>
+									<tr>
+										<td>대표이사</td>
+										<td>우 종 완</td>
+									</tr>
+									<tr>
+										<td class="last">보유브랜드</td>
+										<td class="last">BASIC HOUSE / RRIG / MIND BRIDGE / THE CLASS <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JUCY JUDY / MARC BRICK / SPELLO</td>
+									</tr>
+									<tr>
+										<td>본점소재지</td>
+										<td>(135-509) 서울 강남구 봉은사로 456 TBH 빌딩</td>
+									</tr>
+									</tbody>
+								</table>
+								<table class="table2">	
+									<thead>
+									<tr class="first">
+										<td>대표번호</td>
+										<td>(02) 2058-3800</td>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td>자본금</td>
+										<td>104.3억 원</td>
+									</tr>
+									<tr>
+										<td>발행주식수</td>
+										<td>20,856,819주</td>
+									</tr>
+									<tr>
+										<td>임직원</td>
+										<td>578명(2015년 12월말 기준)</td>
+									</tr>
+									<tr>
+										<td>결산시기</td>
+										<td>12월31일</td>
+									</tr>
+									<tr>
+										<td>관계회사</td>
+										<td>TBH Hongkong Limited / 백가호(상해)패션유한공사</td>
+									</tr>													
+									<tr>
+										<td></td>
+										<td></td>
+									</tr>									
+									</tbody>
+								</table>
+							</div>
+							<div class="invest2">
+								<ul class="subject2">
+									<li class="tab_Tit">주식정보</li>
+									<li class="tab_MidTit">2018-07-24</li>
+								</ul>
+								<table class="table3">	
+									<thead>
+										<tr class="first">
+											<td class="col1">주식의 종류</td>
+											<td class="col2">발행주식총수</td>
+											<td class="col3">액면총액</td>
+											<td class="col4">비고</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>보통주</td>
+											<td>20,856,819</td>
+											<td>10,428,409,500</td>
+											<td>1주의 액면금액:500원</td>
+										</tr>
+										<tr>
+											<td>우선주</td>
+											<td>-</td>
+											<td>-</td>
+											<td></td>
+										</tr>									
+									</tbody>
+									<tfoot>
+										<tr>
+											<td>합계</td>
+											<td>20,856,819</td>
+											<td>10,428,409,500</td>
+											<td></td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</div>
+						<div class="tab_content2">
+							<div class="notice1">
+								<ul class="subject2">
+									<li class="tab_Tit">전자공고</li>
+									<li class="tab_MidTit">2018-07-24</li>
+								</ul>
+								<table class="table4">	
+									<thead>
+										<tr class="first">
+											<td class="col1">NO</td>
+											<td class="col2">공고제목</td>
+											<td class="col3">공고 등록일</td>
+											<td class="col4">공고기간</td>
+											<td class="col5">비고<br>(최근변경일)</td>
+											<td class="col6">첨부파일</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>
+												<a href="#">외부감사인 선임 공고</a>
+											</td>
+											<td>2018-07-21</td>
+											<td>18.04.20 ~ 20.02.28	</td>
+											<td>18.09.01</td>
+											<td>
+												<a href="http://tbhglobal.co.kr/IMG/Disclosure.pdf" class="download" download target="_blank">다운로드</a>
+											</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>
+												<a href="#">18상반기결산_대차대조표공고</a>
+											</td>
+											<td>2018-04-20</td>
+											<td>18.06.20 ~ 21.04.30	</td>
+											<td>18.07.21</td>
+											<td>
+												<a href="http://tbhglobal.co.kr/IMG/Disclosure.pdf" class="download" download target="_blank">다운로드</a>
+											</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>
+												<a href="#">17하반기_대차대조표공고2</a>
+											</td>
+											<td>2017-09-24</td>
+											<td>17.09.24 ~ 18.05.31</td>
+											<td>18.02.24</td>
+											<td>
+												<a href="http://tbhglobal.co.kr/IMG/Disclosure.pdf" class="download" download target="_blank">다운로드</a>
+											</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>
+												<a href="#">17하반기_대차대조표공고</a>
+											</td>
+											<td>2017-09-01</td>
+											<td>17.09.22 ~ 17.12.21</td>
+											<td>17.09.22</td>
+											<td>
+												<a href="http://tbhglobal.co.kr/IMG/Disclosure.pdf" class="download" download target="_blank">다운로드</a>
+											</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td>
+												<a href="#">16상반기_대차대조표공고</a>
+											</td>
+											<td>2016-06-01</td>
+											<td>16.06.01 ~ 18.03.13	</td>
+											<td>17.06.22</td>
+											<td>
+												<a href="http://tbhglobal.co.kr/IMG/Disclosure.pdf" class="download" download target="_blank">다운로드</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>	
+						</div>
+					</div>
+				</div>																				
+		</section>
+		</section>
+		<footer id="ft">
+			<div class="inner">
+				<ul class="ft_info">
+					<li><a href="#">경영이념</a></li>
+					<li><a href="#">인재채용</a></li>
+					<li><a href="#">개인정보취급처리방침</a></li>
+				</ul>
+				<ul class="adress">
+					<li>본사 : 서울특별시 강남구 봉은사로 456 (삼성동, TBH 빌딩), 우편번호: 06153</li>
+					<li>덕계공장 : 경상남도 양산시 그린공단로 38 (매곡동, 베이직하우스)</li>
+					<li>COPYRIGHT 2018 TBH GROUP ALL RIGHT RESERVED</li>
+				</ul>
+				<div class="ft_right">
+					<div class="select">
+						<select name="sitemap">
+						  <option value="FamilySite" selected="selected">패밀리사이트</option>
+						  <option value="BASICHOUSE">Basic House</option>
+						  <option value="RRIG">RRIG</option>
+						  <option value="MIND BRIDGE">MIND BRIDGE</option>
+						  <option value="THE CLASS">THE CLASS</option>
+						  <option value="JUCY JUDY">JUCY JUDY</option>
+						  <option value="MARCBRICK">MARCBRICK</option>
+						  <option value="SPELLO">SPELLO</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+		$(".gnb li").hover(function(){
+			$(".sub", this).stop().slideToggle();
+		});
+
+</script>
+</html>

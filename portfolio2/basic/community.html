@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+	a:hover{text-decoration: underline;}
+	/*header*/
+	*{font-family: 'NanumGothic';}
+#content{width:100%;clear: both;}
+#content .company_bg{display: block; width:100%;height: 500px;background:url('./img/company_bg.jpg');background-repeat: no-repeat;background-position: center;border:1px solid #ddd;clear: both;}
+
+#content .nav_sub{width:100%;height:60px;border-bottom: 1px solid #ddd;position: relative;margin-top: -4px;}
+#content .nav_sub label{width:200px;height:100%;border-left: 1px solid #ddd;border-right: 1px solid #ddd;display: block; background:url('./img/bottom_arrow.png');background-repeat: no-repeat;background-position:175px center;box-sizing: border-box; line-height: 58px; text-indent: 20px;}
+#content .nav_sub label[for="nav_ck1"]{position:absolute;top:0;left: 400px;}
+#content .nav_sub label[for="nav_ck2"]{border-left:0; position:absolute;top: 0;left: 600px;}
+#content .nav_sub label a{color: black;}
+#content .nav_sub input{display: none;}
+#content .nav_sub a.home{width:21px;height:17px;display: block;background:url('./img/home_ico.png');background-repeat: no-repeat;background-position: center;position: absolute;top: 20px;}
+#content .nav_sub .nav_list1{height:200px; background: #133990; width:200px;position: absolute;top: 60px;z-index: 200;left: 400px;}
+#content .nav_sub li{width:100%; text-indent:20px;}
+#content .nav_sub li a{color:white;}
+#content .nav_sub .nav_list2{background: #133990; position: absolute;top: 60px;z-index: 200;left: 600px;}
+#content .nav_sub ul li{clear:both; line-height:50px;}
+#content .nav_sub ul li a{display: block; width:200px; height:50px;}
+#content .nav_sub ul li:hover{background:#0c2e7b;}
+#nav_ck1 ~ .nav_list1{display: none;}
+#nav_ck1:checked ~ .nav_list1{display:block; height:auto;}
+#nav_ck2 ~ .nav_list2{display: none;}
+#nav_ck2:checked ~ .nav_list2{display:block; height:auto;}
+	
+	
+	
+.company_info{width:100%; height:100%;}	
+.company_info .company_infoTit{font-size:20px; font-weight:500; margin-top:100px; letter-spacing: -1.2px;}
+.company_info .company_infoTit:after{content: " "; display: block; width:40px; height:3px; background-color:#233499; margin:10px 0px;}
+.company_info .company_centerTit{width:100%; text-align: center; font-family: "Gotham"; font-size:22px; font-weight:400; letter-spacing: -1.2px; margin-top:150px;}	
+.company_info .company_midTit{width:100%; text-align: center; font-size:26px; font-weight:400; margin-top:20px;}
+.company_info .company_adArea{width:100%; margin:0px auto; margin-top:80px; }
+.company_info .company_adArea label{display:block; width: 100%; height:80px; border:1px solid #ccc; box-sizing: border-box; text-align: center; line-height: 80px; font-size:18px; font-weight: 500; margin:0px auto;}
+.company_info .adArea_contents1{width:100%; height:800px; display: block;}
+.company_info .adArea_contents1 .videoArea{width:100%; height:500px; clear:both;}
+.company_info .adArea_contents1 .videocaption{clear:both; width:100%; height:80px; border-bottom:1px solid #ccc;}
+.company_info .adArea_contents1 .videocaption .videocaption_tit{text-align:center; font-size:20px; font-weight: 500; line-height: 80px;}
+
+</style>
+<body>
+	<div class="wrap">
+		<header id="header">
+				<div class="gnb">
+					<h1><a href="index.html"><img src="./img/logo.png" alt="TBHGLOBAL"></a></h1>
+					<ul class="gnb_wrap">
+						<li><a href="company.html">회사소개</a>
+							<ul class="sub">
+								<li><a href="company.html">회사소개</a></li>
+								<li><a href="philosophy.html">경영이념</a></li>
+								<li><a href="notice.html">알림마당</a></li>
+								<li><a href="contactus.html">오시는길</a></li>
+							</ul>
+						</li>
+						<li><a href="csr.html">사회공헌</a>
+							<ul class="sub">
+								<li><a href="csr.html">사회공헌</a></li>
+							</ul>
+						</li>
+						<li><a href="investment.html">투자정보</a>
+							<ul class="sub">
+								<li><a href="investment.html">투자정보</a></li>
+							</ul>
+						</li>
+						<li><a href="recruit.html">인재채용</a>
+							<ul class="sub">
+								<li><a href="recruit.html">인재채용</a></li>
+							</ul>
+						</li>
+						<li><a href="community.html">미디어센터</a>
+							<ul class="sub">
+								<li><a href="community.html">미디어센터</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div class="language">
+						<select id="lang" title="select lang">
+							<option selected="selected">KOR</option>
+							<option>ENG</option>
+							<option>JPN</option>
+							<option>CHN</option>
+							<option>GER</option>
+						</select>
+					</div>
+				</div>
+
+		</header>
+		<section id="content">
+			<img src="./img/csr_bg.jpg" alt="회사사진" width="100%" height="500px" >
+			<div class="nav_sub">
+               	<div class="inner">	
+                	<a href="index.html" class="home"></a>
+					<input type="radio" name="nav_ck" id="nav_ck1">
+					<label for="nav_ck1"><a href="community.html">미디어센터</a></label>
+					<div class="nav_list1">
+						<ul>
+							<li><a href="company.html">회사소개</a></li>
+							<li><a href="csr.html">사회공헌</a></li>
+							<li><a href="investment.html">투자정보</a></li>
+							<li><a href="recruit.html">인재채용</a></li>
+						</ul>
+					</div>
+					<input type="radio" name="nav_ck" id="nav_ck2">
+					<label for="nav_ck2"><a href="community.html">기업광고</a></label>
+					<div class="nav_list2">
+						<ul>
+							<li><a href="community.html">기업광고</a></li>
+						</ul>
+					</div>
+				</div>	
+			</div>
+			<section class="company_info">
+				<div class="inner">
+					<h3 class="company_infoTit">기업홍보</h3>
+					<h3 class="company_centerTit">Corperate Advertise</h3>
+					<h4 class="company_midTit">홍보센터</h4>
+					<div class="company_adArea">
+						<label for="adArea1">브랜드광고</label>
+						<div class="adArea_contents1">
+							<div class="videoArea">
+								<iframe width="1200" height="500" src="https://www.youtube.com/embed/6Sy_-6RlWzE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							</div>
+							<div class="videocaption">
+								<h3 class="videocaption_tit">베이직하우스 가로수길 플래그쉽 스토어 오픈</h3>
+							</div>
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			</section>	
+		</section>
+		<footer id="ft">
+			<div class="inner">
+				<ul class="ft_info">
+					<li><a href="#">경영이념</a></li>
+					<li><a href="#">인재채용</a></li>
+					<li><a href="#">개인정보취급처리방침</a></li>
+				</ul>
+				<ul class="adress">
+					<li>본사 : 서울특별시 강남구 봉은사로 456 (삼성동, TBH 빌딩), 우편번호: 06153</li>
+					<li>덕계공장 : 경상남도 양산시 그린공단로 38 (매곡동, 베이직하우스)</li>
+					<li>COPYRIGHT 2018 TBH GROUP ALL RIGHT RESERVED</li>
+				</ul>
+				<div class="ft_right">
+					<div class="select">
+						<select name="sitemap">
+						  <option value="FamilySite" selected="selected">패밀리사이트</option>
+						  <option value="BASICHOUSE">Basic House</option>
+						  <option value="RRIG">RRIG</option>
+						  <option value="MIND BRIDGE">MIND BRIDGE</option>
+						  <option value="THE CLASS">THE CLASS</option>
+						  <option value="JUCY JUDY">JUCY JUDY</option>
+						  <option value="MARCBRICK">MARCBRICK</option>
+						  <option value="SPELLO">SPELLO</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	
+
+</body>
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+		$(".gnb li").hover(function(){
+			$(".sub", this).stop().slideToggle();
+		});
+
+</script>
+</html>

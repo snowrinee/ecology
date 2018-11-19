@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+	/*header*/
+	*{font-family: 'NanumGothic';}
+#content{width:100%;clear: both;}
+#content .company_bg{display: block; width:100%;height: 500px;background:url('./img/company_bg.jpg');background-repeat: no-repeat;background-position: center;border:1px solid #ddd;clear: both;}
+
+#content .nav_sub{width:100%;height:60px;border-bottom: 1px solid #ddd;position: relative;margin-top: -4px;}
+#content .nav_sub label{width:200px;height:100%;border-left: 1px solid #ddd;border-right: 1px solid #ddd;display: block; background:url('./img/bottom_arrow.png');background-repeat: no-repeat;background-position:175px center;box-sizing: border-box; line-height: 58px; text-indent: 20px;}
+#content .nav_sub label[for="nav_ck1"]{position:absolute;top:0;left: 400px;}
+#content .nav_sub label[for="nav_ck2"]{border-left:0; position:absolute;top: 0;left: 600px;}
+#content .nav_sub label a{color: black;}
+#content .nav_sub input{display: none;}
+#content .nav_sub a.home{width:21px;height:17px;display: block;background:url('./img/home_ico.png');background-repeat: no-repeat;background-position: center;position: absolute;top: 20px;}
+#content .nav_sub .nav_list1{height:200px; background: #133990; width:200px;position: absolute;top: 60px;z-index: 200;left: 400px;}
+#content .nav_sub li{width:100%; text-indent:20px;}
+#content .nav_sub li a{color:white;}
+#content .nav_sub .nav_list2{background: #133990; position: absolute;top: 60px;z-index: 200;left: 600px;}
+#content .nav_sub ul li{clear:both; line-height:50px;}
+#content .nav_sub ul li a{display: block; width:200px; height:50px;}
+#content .nav_sub ul li:hover{background:#0c2e7b;}
+#nav_ck1 ~ .nav_list1{display: none;}
+#nav_ck1:checked ~ .nav_list1{display:block; height:auto;}
+#nav_ck2 ~ .nav_list2{display: none;}
+#nav_ck2:checked ~ .nav_list2{display:block; height:auto;}
+	
+	
+	
+.company_info{width:100%; height:100%;}	
+.company_info .company_infoTit{font-size:20px; font-weight:500; margin-top:100px; letter-spacing: -1.2px;}
+.company_info .company_infoTit:after{content: " "; display: block; width:40px; height:3px; background-color:#233499; margin:10px 0px;}
+.company_info .company_centerTit{width:100%; text-align: center; font-family: "Gotham"; font-size:22px; font-weight:400; letter-spacing: -1.2px; margin-top:150px;}	
+.company_info .company_midTit{width:100%; text-align: center; font-size:26px; font-weight:400; margin-top:20px;}
+.company_info .company_midTit strong{color:#233499; font-weight:500;}
+	
+.company_info .company_centerMidTit{width:100%; text-align: center; font-size:20px; font-weight:400; letter-spacing: -0.8px; margin-top:20px; line-height:30px;}
+.company_info .company_centerMidTit:after{content: " "; display: block; width:70px; height:1px; background-color:#233499; margin:80px auto; transform: rotate(-45deg);}
+	
+
+.company_info .csrbox{width:100%; height:220px; margin-top:80px; margin-bottom: 70px;}
+.company_info .csrbox li{width:220px; height:220px; border:3px solid #233499; float:left; margin-left:40px; margin-right:40px; box-sizing: border-box; border-radius: 110px;}
+.company_info .csrbox .csr_info{width:100%; height:100%; text-align: center; padding-top:65px; box-sizing: border-box;}
+.company_info .csrbox .csr_info h4{font-family:"Gotham"; color:#233499; font-weight:600; line-height: 40px;}
+.company_info .csrbox .csr_info p{font-weight:500; font-size:18px; letter-spacing: -0.8px;}
+.csr_subBg{display: block;}	
+.grow_wrap .inner {padding-top:50px;}
+.grow_wrap .grow_Tit{font-size:20px; font-weight:500;}
+.grow_wrap .grow_MidTit{font-size:14px; margin-top:5px;}
+.grow_con{margin-top:30px; margin-bottom:100px;}	
+.grow_con label{display: block; width:100%; height:60px; border-bottom:4px solid #233499; line-height:60px;
+background:url('./img/checkbox_arrow.png'); background-repeat: no-repeat; background-position:1150px center; text-indent: 20px;}	
+.grow_con input{display: none;}
+.grow_con .conbox1,.grow_con .conbox2,.grow_con .conbox3,.grow_con .conbox4,.grow_con .conbox5,.grow_con .conbox6 {display: none;}	
+#rdo1:checked ~ .conbox1, #rdo2:checked ~ .conbox2, #rdo3:checked ~ .conbox3, #rdo4:checked ~ .conbox4, #rdo5:checked ~ .conbox5, #rdo6:checked ~ .conbox6{display: block;}	
+#rdo1:checked ~ label[for=rdo1],#rdo2:checked ~ label[for=rdo2],#rdo3:checked ~ label[for=rdo3],#rdo4:checked ~ label[for=rdo4],#rdo5:checked ~ label[for=rdo5],#rdo6:checked ~ label[for=rdo6] {background:url('./img/checkbox_arrow_top.png'); background-position:1150px center; background-repeat: no-repeat;}
+.grow_con .conbox1,.grow_con .conbox2,.grow_con .conbox3,.grow_con .conbox4, .grow_con .conbox5,
+.grow_con .conbox6{padding:20px 30px; background:#f4f4f4;}	
+	
+	
+	
+.grow_con .information{font-size:14px; width:1000px; line-height:20px; text-align: justify;}
+</style>
+<body>
+	<div class="wrap">
+		<header id="header">
+				<div class="gnb">
+					<h1><a href="index.html"><img src="./img/logo.png" alt="TBHGLOBAL"></a></h1>
+					<ul class="gnb_wrap">
+						<li><a href="company.html">회사소개</a>
+							<ul class="sub">
+								<li><a href="company.html">회사소개</a></li>
+								<li><a href="philosophy.html">경영이념</a></li>
+								<li><a href="notice.html">알림마당</a></li>
+								<li><a href="contactus.html">오시는길</a></li>
+							</ul>
+						</li>
+						<li><a href="csr.html">사회공헌</a>
+							<ul class="sub">
+								<li><a href="csr.html">사회공헌</a></li>
+							</ul>
+						</li>
+						<li><a href="investment.html">투자정보</a>
+							<ul class="sub">
+								<li><a href="investment.html">투자정보</a></li>
+							</ul>
+						</li>
+						<li><a href="recruit.html">인재채용</a>
+							<ul class="sub">
+								<li><a href="recruit.html">인재채용</a></li>
+							</ul>
+						</li>
+						<li><a href="community.html">미디어센터</a>
+							<ul class="sub">
+								<li><a href="community.html">미디어센터</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div class="language">
+						<select id="lang" title="select lang">
+							<option selected="selected">KOR</option>
+							<option>ENG</option>
+							<option>JPN</option>
+							<option>CHN</option>
+							<option>GER</option>
+						</select>
+					</div>
+				</div>
+
+		</header>
+		<section id="content">
+			<img src="./img/csr_bg.jpg" alt="회사사진" width="100%" height="500px" >
+			<div class="nav_sub">
+               	<div class="inner">
+                	<a href="index.html" class="home"></a>
+					<input type="radio" name="nav_ck" id="nav_ck1">
+					<label for="nav_ck1"><a href="csr.html">사회공헌</a></label>
+					<div class="nav_list1">
+						<ul>
+							<li><a href="company.html">회사소개</a></li>
+							<li><a href="investment.html">투자정보</a></li>
+							<li><a href="recruit.html">인재채용</a></li>
+							<li><a href="community.html">미디어센</a></li>							
+						</ul>
+					</div>
+					<input type="radio" name="nav_ck" id="nav_ck2">
+					<label for="nav_ck2"><a href="csr.html">사회공헌</a></label>
+					<div class="nav_list2">
+						<ul>
+							<li><a href="csr.html">사회공헌</a></li>
+						</ul>
+					</div>
+				</div>	
+			</div>
+			<section class="company_info">
+				<div class="inner">
+					<h3 class="company_infoTit">사회공헌</h3>
+					<h3 class="company_centerTit">Ethics management</h3>
+					<h4 class="company_midTit">목표핵심가치<strong>티비에이치글로벌</strong></h4>
+					<h4 class="company_centerMidTit">윤리경영의 실천을 통해 기업의 사회적 책임을 다하며 존중과 배려를 바탕으로 성과와 가치를 다함께 나누겠습니다. <br>
+공정하게 거래하고 투명하게 공시하며 모든 형태의 부정부패를 근절하겠습니다.</h4>
+					<ul class="csrbox">
+						<li>
+							<div class="csr_info">
+								<h4>COMPANY</h4>
+								<p>직원의 존중과 보호</p>
+							</div>
+						</li>
+						<li>
+							<div class="csr_info">
+								<h4>CUSTOMER</h4>
+								<p>고객과의 신뢰</p>
+							</div>
+						</li>
+						<li>
+							<div class="csr_info">
+								<h4>EMPLOYEE</h4>
+								<p>협력업체와 상생</p>
+							</div>
+						</li>
+						<li>
+							<div class="csr_info">
+								<h4>TRANSPARENT</h4>
+								<p>투명한경영</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<img src="./img/csr.jpg" alt="티비에이치글로벌상생" width="100%" height="100%" class="csr_subBg">	
+			<div class="grow_wrap">
+				<div class="inner">
+					<h3 class="grow_Tit">직원의 사내행동</h3>
+					<p class="grow_MidTit">어떠한 경우에든 회사 및 자회사의 직원은 누구나 애사심과 회사의 조화에 기여한다는 목표 하에 회사의 이익에 부합하는 행동을 하여야 한다.</p>
+					<div class="grow_con">
+						<input type="checkbox" name="rdo" id="rdo1">
+						<label for="rdo1">자산보호</label>
+						<div class="conbox1">
+							<p class="information">회사 및 자회사는 직무 관계에 있어서 어떠한 연유에서든 차별을 하지 않으며, 특히 직원들을 각자의 능력에 근거하여 채용하고, 모든 직원의 사생활과 존엄성을 존중하는 것을 원칙으로 한다. 회사 및 자회사는 근무조건이 직원들의 건강에 해가 되지 않도록 하고, 직원의 안전과 보호를 위하여 모든 조처를 취하는데 우선순위를 두고 있다. 회사 및 자회사는 내부고발자를 보호하고 인사상의 불이익이 없도록 하기 위하여 내부고발의 이해관계 여부를 불문하고 내부고발에 대한 심의담당자 이외의 직원이 내부고발의 내용과 내부고발자에 관한 정보를 알지 못하도록 충분한 주의를 다한다.</p>
+						</div>
+						<input type="checkbox" name="rdo" id="rdo2">
+						<label for="rdo2">회사 이미지 보호</label>
+						<div class="conbox2">
+							<p class="information">회사 소유의 자산이 손상되지 않도록 할 때 회사의 번영이 보장되는 것이며, 이는 모든 직원들에게도 유익한 것이다. 그러므로 회사의 직원은 회사의 자산을 훼손, 도난 혹은 횡령으로부터 보호하는데 기여해야 할 의무가 있으며, 특히 회사의 자산을 횡령하거나 개인적인 용도로 사용하지 않을 의무가 있다. 자산이란 건물, 설비, 기계, 차량, 장비, 컴퓨터 및 전산 시스템, 각종 자재 등의 물리적인 재화뿐 아니라, 지적 소유권이나 노하우 같은 비 물리적인 자산도 포함된다.</p>
+						</div>
+						<input type="checkbox" name="rdo" id="rdo3">
+						<label for="rdo3">정보의 신뢰도와 정직도</label>
+						<div class="conbox3">
+							<p class="information">회사의 기업 이미지와 회사 제품의 평판은 회사의 연속성을 보장하는 요소이다.
+	회사의 직원은 이의 중요성을 인식하여, 비방행위를 일체 삼간다.</p>
+						</div>
+						<input type="checkbox" name="rdo" id="rdo4">
+						<label for="rdo4">대외비 엄수</label>
+						<div class="conbox4">
+							<p class="information">훌륭한 경영을 위해서는 정보의 전달이 엄중히 시행되는 것이 필수적이다.
+	이를 위해서는 각자가 가능한 한 가장 정확한 정보와 문서를 제공하도록 노력해야 하며, 더구나 어떠한 분야를 막론하고 위조되거나 의도적으로 불완전한 정보나 문서를 제공해서는 안 된다.</p>
+						</div>
+						<input type="checkbox" name="rdo" id="rdo5">
+						<label for="rdo5">직무상 얻은 정보의 사용</label>
+						<div class="conbox5">
+							<p class="information">회사의 직원은 회사 소유의 정보 중 때가 되기 전에 유출되거나 발표되면 회사의 이해를 저해할 위험이 있는 정보를 접하게 되는 경우가 있다.
+	이러한 정보로는 특히 제품, 디자인, 생산 데이터, 마케팅, 영업 및 재무 계획에 관한 정보와 지적 소유권 및 노하우를 유출할 위험이 있는 모든 요소들을 들 수 있다. 각자는 이러한 정보가 기업의 외부에 직, 간접적으로 유출되지 않을 뿐 아니라, 이러한 정보를 접할 위치에 있지 아니한 다른 직원들에게도 유출되지 않도록 할 의무가 있다.</p>
+						</div>	
+						<input type="checkbox" name="rdo" id="rdo6">
+						<label for="rdo6">윤리담당자</label>
+						<div class="conbox6">
+							<p class="information">회사나 제3자에 대한 직무상 얻은 특수 정보를 개인적으로 사용하는 것은 윤리에 어긋날 뿐 아니라 내부자 거래에 해당하는 범법행위가 될 수도 있다.</p>
+						</div>	
+					</div>									
+				</div>
+			</div>
+					
+									
+		</section>
+		<footer id="ft">
+			<div class="inner">
+				<ul class="ft_info">
+					<li><a href="#">경영이념</a></li>
+					<li><a href="#">인재채용</a></li>
+					<li><a href="#">개인정보취급처리방침</a></li>
+				</ul>
+				<ul class="adress">
+					<li>본사 : 서울특별시 강남구 봉은사로 456 (삼성동, TBH 빌딩), 우편번호: 06153</li>
+					<li>덕계공장 : 경상남도 양산시 그린공단로 38 (매곡동, 베이직하우스)</li>
+					<li>COPYRIGHT 2018 TBH GROUP ALL RIGHT RESERVED</li>
+				</ul>
+				<div class="ft_right">
+					<div class="select">
+						<select name="sitemap">
+						  <option value="FamilySite" selected="selected">패밀리사이트</option>
+						  <option value="BASICHOUSE">Basic House</option>
+						  <option value="RRIG">RRIG</option>
+						  <option value="MIND BRIDGE">MIND BRIDGE</option>
+						  <option value="THE CLASS">THE CLASS</option>
+						  <option value="JUCY JUDY">JUCY JUDY</option>
+						  <option value="MARCBRICK">MARCBRICK</option>
+						  <option value="SPELLO">SPELLO</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+		$(".gnb li").hover(function(){
+			$(".sub", this).stop().slideToggle();
+		});
+
+</script>
+</html>
