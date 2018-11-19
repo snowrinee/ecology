@@ -1,0 +1,152 @@
+@import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
+
+
+*{margin: 0px; padding: 0px; font-family: 'Noto Sans Korean', 'malgun gothic','AppleSDGothcNeo','AppleGothic'; box-sizing: border-box;}
+body,html{width:100%; font-family: 'Noto Sans Korean', 'malgun gothic','AppleSDGothcNeo','AppleGothic';}
+ul,li{list-style: none;}
+img{display: block;}
+a{position:relative; font-family: 'Noto Sans Korean', 'malgun gothic','AppleSDGothcNeo','AppleGothic'; text-decoration: none; color:#333;}
+button,input,label{display: block;}
+.skip{text-indent: -9999px; font-size:0; overflow: hidden;}
+.inner{width:1200px; margin:0px auto; height:auto; position:relative;}
+
+.wrap{width:100%; height:100%; min-width: 1200px;}
+#header{width:100%; height:110px;}
+#header .tnb{width:100%; height:40px;}
+#header .tnb ul{float:right;}
+#header .tnb ul li{float:left; position:relative;}
+#header .tnb ul li:after{content: " "; display: block; position:absolute; top:15px; left:0; width:1px; height:10px; background:#ccc;}
+#header .tnb ul li:nth-child(1):after{width:0;}
+#header .tnb ul li a{font-size:14px; padding:8px; line-height: 40px; font-weight:300;}
+#header .gnb{width:100%; height:70px; position:relative;}
+#header .gnb h1{width:190px; position:absolute; left:50%; margin-left:-95px; top:10px;}
+#header .gnb h1 img{width:100%;}
+#header .gnb span{position:absolute; padding: 5px;bottom: 10px;}
+#header .gnb .menu1{left: 240px;}
+#header .gnb .menu2{/* bottom: 10px; */left: 357px;}
+#header .gnb .menu3{right: 335px;}
+#header .gnb .menu4{right: 210px;}
+#header .gnb .menu5{right: 100px;}
+#header .gnb span a{font-size:16px;}
+#main{width:100%;}
+.visualWrap{width:100%; height:600px; background:url("../img/mainBg.png"); background-repeat: no-repeat; background-size:cover; background-position:center;}
+.visualWrap .visualTit{position:absolute;top: 394px;left: 126px;}
+.visualWrap .reservationBtn{width:940px; height:80px; background:#fff; position:absolute; top:500px; left:50%; margin-left:-470px; padding:20px 20px;}
+.visualWrap .reservationBtn span{color:#4e4e4e; font-size:18px;}
+.visualWrap .reservationBtn li{width:160px; height:100%; position:relative;float:left; padding-left:20px;}
+.visualWrap .reservationBtn li:nth-child(1):after{width:0}
+.visualWrap .reservationBtn li:nth-child(1){padding:0px;}
+.visualWrap .reservationBtn li:nth-child(3),
+.visualWrap .reservationBtn li:nth-child(4),
+.visualWrap .reservationBtn li:nth-child(5){width:120px;}
+.visualWrap .reservationBtn li:after{content:""; display: block; width:1px; height:24px; position:absolute; top:10px; background:#ccc;}
+.visualWrap .reservationBtn .check .checkTit{float:left; line-height: 40px; text-indent: 10px;}
+.visualWrap .reservationBtn .check img{float:right; width:24px; margin-top:4px;}
+.visualWrap .reservationBtn li select{width:100px; height:40px; border:0; outline:0; margin-left:14px;font-size:18px; font-weight:400; color:#4e4e4e;}
+.visualWrap .reservationBtn .information{width:28px; position:absolute; right:180px;}
+.visualWrap .reservationBtn .information img{width:100%;}
+.visualWrap .reservationBtn .search{width:130px; height:40px; color:#fff; text-align: center; line-height: 40px; font-weight:300; position:absolute; right:30px; background:#9f8674;}
+.promotionLst{width:100%; padding-bottom:100px;}
+.promotionLst .inner{padding-top:100px;}
+.promotionLst .promotionLst_tit{font-size:36px; font-family: "NanumMyeongjo"; font-weight:500; text-align: center;}
+.promotionLst .promotionLst_info{font-size:18px; text-align: center; font-weight:300; margin-top:10px; color:#9f8674;}
+.promotionLst .promotion_more{float:right;}
+.promotionLst .promotion_more:hover{text-decoration: underline;}
+.promotionLst .promotionWrap{width:100%; margin-top:40px; border:1px solid #fff;}
+.promotionLst .promotionWrap:after{content: " "; display: block; clear:both;}
+.promotionLst .promotionWrap li{width:380px; float:left; margin-right:28px; margin-bottom:100px;}
+.promotionLst .promotionWrap li:nth-child(3n+3){margin-right:0;}
+.promotionLst .promotionWrap .proCon{ padding-top:20px; padding-bottom:20px;}
+.promotionLst .promotionWrap .proCon .proSubject{font-size:14px; color:#9f8674; font-weight:500; text-align: center;}
+.promotionLst .promotionWrap .proCon .proTit{font-size:22px;font-weight:400;text-align: center;/* width: 100%; */display: block;}
+.promotionLst .promotionWrap .proCon .proTit:hover{text-decoration: underline;}
+.promotionLst .promotionWrap .proCon .proInfo{text-align: center; margin-top:10px; line-height: 20px; font-size:15px; font-weight:300;}
+.promotionLst .promotionWrap .proCon .proDate{text-align: center; margin-top:50px; font-weight:300;}
+.promotionLst .promotionWrap .proCon .proDate span{font-weight:400; margin-right:8px;}
+.promotionLst .promotionWrap .priceBox{width:100%; padding-top:20px; border-top:1px solid #d9d9d9; clear: both;}
+.promotionLst .promotionWrap .priceBox:after{clear:both; content: " "; display: block;}
+.promotionLst .promotionWrap .priceTit{float:left; line-height: 28px; color:#4e4e4e;}
+.promotionLst .promotionWrap .price{font-size:28px;float:right; font-family: "NanumMyeongjo"; font-weight:500;}
+.promotionLst .promotionWrap .reserve{display: block; width:180px; height:40px; background:#bf954c; clear:both; margin:0px auto; margin-top:20px; color:#fff; text-align: center; line-height: 38px;}
+.experience{width:100%; height:600px; background:#ede8e3;}
+.experience .inner{padding-top:100px;}
+.experience .experience_tit,.experience .experience_subject{font-family: "NanumMyeongjo"; font-weight:500; text-align: center;}
+.experience .experience_tit{font-size:28px;}
+.experience .experience_subject{font-size:36px; margin-top:10px;}
+.experience .experienceLst{width:100%; margin-top:50px;}
+.experience .experienceLst li{float:left; margin-right:85px;}
+.experience .experienceLst li:nth-child(3n+3){margin-right:0;}
+.experience .experienceLst:after{content: " "; display: block; clear:both;}
+.experience .experienceLst li{font-size:15px;}
+.experience .experienceLst .ex_tit,
+.experience .experienceLst .ex_info{text-align: center; margin-top:10px; font-weight:300;}
+.experience .experienceLst .ex_tit{font-size:18px; font-weight:400; margin-top:20px;}
+.experience .experienceLst .more{display: block; margin:0px auto; width:120px; height:35px; line-height: 35px; background:#9f8674; color:#fff; font-weight:300; text-align: center; margin-top:20px;}
+
+.hotelInfo{width:100%; height:600px;}
+.hotelInfo .inner{padding-top:120px;}
+.hotelInfo .inner > div{float:left; width:552px; height:298px; background:url("../img/infoBg.png"); background-repeat: no-repeat; background-size: cover; background-position: center; text-align: center;}
+.hotelInfo .inner > div:nth-child(2){float:right;}
+.hotelInfo .inner > div > img{width:74px; margin: 0px auto; margin-top:40px; margin-bottom:14px; }
+.hotelInfo .inner > .guideMap > img{width:60px; margin-top:50px;}
+.hotelInfo .inner > div .hotelInfo_tit{color:#fff; font-weight:400;}
+.hotelInfo .inner > div .hotelInfo_midtit{color:#fff; font-weight:400; font-size: 15px; font-weight:300;}
+.hotelInfo .inner > div .scrap{width:140px; height:38px; border:1px solid #fff; color:#fff; line-height: 38px; text-align: center; display: block; margin:0px auto; margin-top:18px; font-size:15px;}
+.siteMap{width:100%; height:480px; background:#f4f4f4; color:#4e4e4e;}
+.siteMap .siteInfo{clear:both; height:48px;}
+.siteMap .siteInfo.line:before{width:1200px; height:1px; background:#d9d9d9; content: " "; display: block; margin-top:20px; margin-bottom:20px;}
+.siteMap .inner{padding-top:50px;}
+.siteMap .sitemap_tit{font-weight:500; float:left; width:180px; line-height: 48px;}
+.siteMap .site_content{font-weight:300; float:left; margin-left:20px; }
+.siteMap .site_content a{padding:10px; line-height: 48px;}
+.siteMap .site_content a:hover{text-decoration: underline;}
+#footer{width:100%; height:214px; background:#262626;}
+#footer h1{width:200px; height:214px; float:left;}
+#footer h1 > img{margin-top:80px;}
+#footer .fnb{float:left; height:60px; margin-left:20px;}
+#footer .fnb:after{clear:both; display: block; content: " ";}
+#footer .fnb li{float:left; line-height: 60px;}
+#footer .fnb li a{color: #969696;font-size:15px;font-weight:300;padding:10px;}
+#footer .copyright:after{content: " "; display: block; clear:both;}
+#footer .copyright p{float:left;font-size:14px;color: #969696;font-weight:300;padding-left:10px;line-height: 28px; padding-left:30px;}
+
+
+/*sub*/
+#subContents{width:100%;}
+#subContents .subBg{width:100%; height:227px; background:#9f8674; color:#fff; text-align: center; font-weight:400; clear:both;}
+#subContents .subBg .inner{padding-top:60px;}
+#subContents .subBg .subBg_tit{width:100%; font-family: "NanumMyeongjo"; font-size:36px; font-weight:400;}
+#subContents .subBg .subBg_midtit{font-size:20px; font-weight:300; margin-top:10px;}
+#subContents .subBg .location{width:300px; margin:0px auto; margin-top:10px;}
+#subContents .subBg .location a{color:#fff; font-weight:300; padding:10px; position:relative; display: inline-block;}
+#subContents .subBg .location a:after{width:1px; height:12px; background:#fff; content: " "; display: inline-block; position:absolute; right:0; top:18px;}
+#subContents .subBg .location a:nth-child(3):after{width:0;}
+
+.content{width:100%;}
+.content .inner{padding-top:100px;}
+.content .room:after{clear:both; display: block; content:" ";}
+.content .room{width:100%; border-bottom:1px solid #d9d9d9; padding:40px 0;}
+
+.content .room .room_con{width:30%; float:left;}
+.content .room .room_con .room_tit{font-size:32px; font-family: "NanumMyeongjo"; font-weight:500; line-height: 38px;}
+.content .room .room_con .room_midtit{font-size:15px; font-weight:400; line-height: 22px; margin-top:14px; font-weight: 300;}
+.content .room .room_con .more{width:80px; display: block; margin-top:30px; color:#9f8674;}
+.content .room .roomImg{float:right;}
+.content .roomMore{display: block; width:200px; height:50px; line-height: 50px; border:1px solid #9f8674; color:#9f8674; margin:0px auto; text-align: center; margin:80px auto;}
+
+.content .spa{width:100%; padding-bottom:50px; border-bottom:1px solid #d9d9d9; margin-bottom:50px;}
+.content .spa .spaCon{padding-top:50px; text-align: center;}
+.content .spa .spaCon .spa_tit{font-family: "NanumMyeongjo"; font-size:36px; line-height: 60px;}
+.content .spa .spaCon .spa_info{font-size:15px; font-weight:400; margin-top:40px; line-height: 30px;}
+
+.content .navsubMenu{width:100%; height:60px;}
+.content .navsubMenu .subMenu{width:300px; float:left; border-bottom:2px solid #d9d9d9;}
+.content .navsubMenu .subMenu a{display: block; width:300px; text-align: center; line-height: 60px;}
+.content .navsubMenu .subMenu:nth-child(1){border-bottom:2px solid #262626;}
+.content .companyInfo{width:100%; margin-top:40px; padding-bottom:140px;}
+.content .companyInfo .con{padding-top:20px; text-align: center;}
+.content .companyInfo .con p{padding-top:20px; text-align: center; line-height: 40px; font-weight:400;}
+
+.content .contentTit{text-align: center; font-family: "NanumMyeongjo"; font-weight:400; font-size:36px;}
+.content .comboBox{width:100%; height:60px; margin-top:24px;}
+.content .comboBox select{width:180px; height:40px; margin-top:8px; float:right; margin-right:10px; font-size:15px; border:0; outline: 0; border-bottom:1px solid #262626;}
