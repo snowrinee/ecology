@@ -1,0 +1,45 @@
+@media (min-width: 1201px) {
+    .m_hd{display: none;}
+	.m_mainWr{display: none;}
+	.m_footer{display: none;}
+}
+@media (max-width: 1200px) {
+	#header{display: none;}
+	.visualWrap, .hotelInfo, .siteMap{display: none;}	
+	#footer{display: none;}
+	.wrap{min-width:320px;}
+    .m_hd{display: block; width:100%; height: 68px; background:#fff; border-bottom:1px solid #d9d9d9;}
+    .m_hd a{display: block;width: 150px;float:left;position: absolute;top: 20px;left: 50%; margin-left:-75px;}
+    .m_hd span{display: block;max-width:30px;height: 30px;position: absolute;right: 2%;top: 24px;}
+    .m_hd span img{width:30px;}
+    .m_hd a img{width:100%;}
+    .m_inner{width:94%; box-sizing: border-box; position: relative; margin:0px auto;}
+	.m_mainWr{width:100%;}
+	.m_main{width:100%; padding-top:-320%;}
+	.m_main img{width:100%;}
+	.m_reservation{width:100%; padding-bottom:20px; margin-top:10px;}
+	.m_reservation .m_inner{width:90%;}
+	.checkBox{width:100%; height:40px; border-bottom:1px solid #d9d9d9; background:#fff; position:relative;}
+	.checkBox .checkTit{font-size:16px; display: block; position:absolute; top:8px; left:0;}
+	.checkBox input{display: block; position:absolute; top:5px; left:50%; min-width:180px; height:30px;margin-left:-80px; border:0; font-size:2vh; font-weight:300;}
+	.checkBox .checkIco{width:20px; position:absolute; right:2%; top:6px;}
+	.checkBox .checkIco img{width:100%;}
+	.checkPerson{width:100%; border-bottom:1px solid #d9d9d9; padding:10px 0px;}
+	.checkPerson .person{width:33.3%; float:left; text-align: center; position:relative;}
+	.checkPerson:after{display: block; clear:both; content: " ";}
+	.checkPerson .person:after{content: " "; width:1px; height:30px; background:#d9d9d9; display: block; position:absolute; top:10px;}
+	.checkPerson .person:nth-child(1):after{width:0;}
+	.checkPerson .person span{display: block; clear:both;}
+	.checkPerson .person select{display: block; width:80%; margin:0px auto; border:0; outline: none; height:24px; border-bottom:1px solid #262626; margin-top:5px;}
+	.button{width:100%; height:40px; background:#9f8674; margin-top:4%; color:#fff; text-align: center; line-height: 40px;}
+	.promotionLst,experience{min-width:320px;}
+	.promotionLst li{width:25.3333%; margin:0 2.5%;}
+	.promotionLst .inner{max-width: 320px;}
+	.experience{height:auto;}	
+	.experience .inner{max-width: 320px;}
+	.experience .experienceLst li{margin-bottom:10%;}
+}
+
+@media (max-width: 768px) {
+    .promotionLst li{width:45%; margin:0 2.5%; clear:both; !important}
+}

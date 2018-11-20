@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/media.css">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+<body>
+	<div class="wrap">
+		<!-- mobile-->
+		<div class="m_hd">
+			<div class="m_inner">
+				<a href="" class="m_logo"><img src="./img/logo.svg" alt=""></a>
+				<span class="m_menu"><img src="./img/m_menu.svg" alt=""></span>
+			</div>
+		</div>
+		<div class="m_mainWr">
+			<div class="m_main">
+				<img src="./img/m_main.png" alt="">
+			</div>
+			<div class="m_reservation">
+				<div class="m_inner">
+					<div class="checkBox">
+						<span class="checkTit">체크인</span>
+						<input type="text" placeholder="날짜를 선택해주세요">
+						<span class="checkIco"><img src="./img/calendar_ico.svg" alt=""></span>
+					</div>
+					<div class="checkBox">
+						<span class="checkTit">체크아웃</span>
+						<input type="text" placeholder="날짜를 선택해주세요">
+						<span class="checkIco"><img src="./img/calendar_ico.svg" alt=""></span>
+					</div>
+					<div class="checkPerson">
+						<div class="person">
+							<span>성인</span>
+							<select name="adult">
+								<option value="1명">1명</option>
+								<option value="2명">2명</option>
+								<option value="3명">3명</option>
+							</select>
+						</div>
+						<div class="person">
+							<span>어린이</span>
+							<select name="child">
+								<option value="1명">1명</option>
+								<option value="2명">2명</option>
+								<option value="3명">3명</option>
+							</select>
+						</div>
+						<div class="person">
+							<span>아기</span>
+							<select name="baby">
+								<option value="1명">1명</option>
+								<option value="2명">2명</option>
+								<option value="3명">3명</option>
+							</select>
+						</div>
+					</div>
+					<div class="button" role="button">검색하기</div>
+				</div>
+			</div>
+		</div>
+		<!--pc-->
+		<header id="header">
+			<div class="inner">
+				<nav class="tnb">
+					<ul>
+						<li><a href="login.php">로그인</a></li>
+						<li><a href="add.php">회원가입</a></li>
+						<li><a href="reserveCheck.html">예매확인</a></li>
+						<li><a href="contactus">오시는길</a></li>
+					</ul>
+				</nav>
+				<nav class="gnb">
+					<h1><a href="index.html" class="skip"><img src="./img/logo.svg" alt="반야트리호텔">반얀트리호텔</a></h1>
+					<span class="menu1"><a href="rooms.html" class="rooms">객실안내</a></span>
+					<span class="menu2"><a href="club&spa.html" class="club&spa">클럽&스파</a></span>
+					<span class="menu3"><a href="company.html" class="company">반얀트리소개</a></span>
+					<span class="menu4"><a href="clubmembers.html" class="clubmembers">클럽멤버쉽</a></span>
+					<span class="menu5"><a href="promotion.html" class="promotion">프로모션</a></span>
+				</nav>
+			</div>
+		</header>
+		<section id="main">
+			<h1 class="skip">메인컨텐츠시작</h1>
+			<div class="visualWrap">
+				<div class="inner">
+					<h3 class="visualTit"><img src="./img/main_tit.png" alt=""></h3>
+					<ul class="reservationBtn">
+					<li>
+						<div class="check">
+							<span class="checkTit">체크인</span>
+							<img src="./img/calendar_ico.svg" alt="">
+						</div>
+					</li>
+					<li>	
+						<div class="check">
+							<span class="checkTit">체크아웃</span>
+							<img src="./img/calendar_ico.svg" alt="">
+						</div>
+					</li>
+					<li>	
+						<select name="adult" class="adult">
+							<option value="성인">성인</option>	
+							<option value="1명">1명</option>
+							<option value="2명">2명</option>
+							<option value="3명">3명</option>
+							<option value="4명">4명</option>
+						</select>
+					</li>	
+					<li>
+						<select name="child" class="child">
+							<option value="어린이">어린이</option>
+							<option value="1명">1명</option>
+							<option value="2명">2명</option>
+							<option value="3명">3명</option>
+						</select>
+					</li>
+					<li>	
+						<select name="baby" class="baby">
+							<option value="아기">아기</option>
+							<option value="1명">1명</option>
+							<option value="2명">2명</option>
+							<option value="3명">3명</option>
+						</select>
+					</li>	
+						<div class="information skip"><img src="./img/info_ico.svg" alt="정보">정보</div>
+						<div class="search" role="button">객실검색</div>
+					</ul>
+				</div>
+			</div>
+			<div class="promotionLst">
+				<div class="inner">
+					<h3 class="promotionLst_tit">프로모션안내</h3>
+					<p class="promotionLst_info">반얀트리 클럽 앤 스파 서울에서의 잊지 못할 소중한 추억을 위한 호텔 프로모션을 소개합니다.</p>
+					<a href="#" class="promotion_more">프로모션더보기 ></a>
+					<ul class="promotionWrap">
+						<li>
+							<a href="">
+								<img src="./img/main_pro1.png" alt="">
+							</a>
+							<div class="proCon">
+								<h5 class="proSubject">객실프로모션</h5>
+								<a href="" class="proTit">센스 오브 로맨스 패키지</a>
+								<p class="proInfo">도심 속에서 즐기는 로맨틱한 여행 Sense of Romance<br>패키지를 소개합니다.</p>
+								<p class="proDate"><span>투숙가능날짜</span>2018. 12. 15 까지</p>
+							</div>
+							<div class="priceBox">
+								<span class="priceTit">가격(V.A.T별도)</span>
+								<span class="price">730,000~</span>
+							</div>
+						</li>
+						<li>
+							<a href="">
+								<img src="./img/main_pro2.png" alt="">
+							</a>
+							<div class="proCon">
+								<h5 class="proSubject">객실프로모션</h5>
+								<a href="" class="proTit">허니문 패키지</a>
+								<p class="proInfo">일생에서 가장 로맨틱한 날인 허니문을 위한<br>허니문 패키지를 소개합니다.</p>
+								<p class="proDate"><span>투숙가능날짜</span>2018. 12. 15 까지</p>
+							</div>
+							<div class="priceBox">
+								<span class="priceTit">가격(V.A.T별도)</span>
+								<span class="price">750,000~</span>
+							</div>
+						</li>
+						<li>
+							<a href="">
+								<img src="./img/main_pro3.png" alt="">
+							</a>
+							<div class="proCon">
+								<h5 class="proSubject">객실프로모션</h5>
+								<a href="" class="proTit">마스터 테라피스트 익스피리언스</a>
+								<p class="proInfo">오랜 경험을 보유한 마스터 테라피스트의<br>노하우가 담긴 스파 테라피를 경험하세요.</p>
+								<p class="proDate"><span>투숙가능날짜</span>2018. 12. 15 까지</p>
+							</div>
+							<div class="priceBox">
+								<span class="priceTit">가격(V.A.T별도)</span>
+								<span class="price">350,000~</span>
+							</div>
+						</li>
+						<li>
+							<a href="">
+								<img src="./img/main_pro4.png" alt="">
+							</a>
+							<div class="proCon">
+								<h5 class="proSubject">이벤트</h5>
+								<a href="" class="proTit">윈터 원더랜드 웨딩 프로모션</a>
+								<p class="proInfo">특별한 겨울 웨딩을 위한 '윈터 원더랜드<br>웨딩' 프로모션을 선보입니다.</p>
+								<p class="proDate"><span>투숙가능날짜</span>2018. 12. 15 까지</p>
+							</div>
+							<div class="priceBox">
+								<span class="priceTit">가격(V.A.T별도)</span>
+								<span class="price">105,000~</span>
+							</div>
+						</li>
+						<li>
+							<a href="">
+								<img src="./img/main_pro5.png" alt="">
+							</a>
+							<div class="proCon">
+								<h5 class="proSubject">객실프로모션</h5>
+								<a href="" class="proTit">오아시스 카바나 패키지</a>
+								<p class="proInfo">반얀트리 서울 오아시스를 완벽하게 즐기는 방법!<br>지금바로만나보세요</p>
+								<p class="proDate"><span>투숙가능날짜</span>2018. 12. 15 까지</p>
+							</div>
+							<div class="priceBox">
+								<span class="priceTit">가격(V.A.T별도)</span>
+								<span class="price">630,000~</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="experience">
+				<div class="inner">
+					<h4 class="experience_tit">기대, 이상의 경험</h4>
+					<h2 class="experience_subject">반얀트리 클럽 앤 스파 서울</h2>
+					<ul class="experienceLst">
+						<li>
+							<img src="./img/mainSpa.png" alt="">
+							<h5 class="ex_tit">스파</h5>
+							<p class="ex_info">몸과 마음, 그리고 영혼에 활기를 더해주는<br>완벽한 안식을 선사합니다.</p>
+							<a href="" class="more">자세히보기</a>
+						</li>
+						<li>
+							<img src="./img/mainPull.png" alt="">
+							<h5 class="ex_tit">다이닝</h5>
+							<p class="ex_info">세계 최고의 요리팀이 만드는 미각을 만족<br>시키는 진정한 풍미를 느껴보세요.</p>
+							<a href="" class="more">자세히보기</a>
+						</li>
+						<li>
+							<img src="./img/mainRec.png" alt="">
+							<h5 class="ex_tit">레크레이션</h5>
+							<p class="ex_info">다양한 프로그램을 통해 육체와 영혼의<br>균형을 맞춰보세요.</p>
+							<a href="" class="more">자세히보기</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="hotelInfo">
+				<div class="inner">
+					<div class="onlineNews">
+						<img src="./img/book.svg" alt="">
+						<h3 class="hotelInfo_tit">온라인 뉴스레터</h3>
+							<p class="hotelInfo_midtit">뉴스레터를 신청하시면 매월 반얀트리에서 진행되는<br>다양한 이벤트 & 프로모션을 가장 먼저 만나볼 수 있습니다.</p>
+							<a href="" class="scrap">구독하기</a>
+					</div>
+					<div class="guideMap">
+						<img src="./img/map.svg" alt="">
+						<h3 class="hotelInfo_tit">반얀트리 가이드맵</h3>
+						<p class="hotelInfo_midtit">7만 평방미터의 부지에 펼쳐진 반얀트리의 전시설을<br>한눈에 볼 수 있는 반얀트리 가이드 맵 입니다.</p>
+						<a href="" class="scrap">바로가기</a>
+					</div>
+				</div>
+			</div>
+			<div class="siteMap">
+				<div class="inner">
+					<div class="siteInfo">
+						<span class="sitemap_tit">About Banyan Tree</span>
+						<div class="site_content">
+							<a href="" class="first_tit">Brand Story </a>
+							<a href="" class="first_tit">CSR</a>
+							<a href="" class="first_tit">Photo&amp;Video</a>
+							<a href="" class="first_tit">Banyan Tree Guide Map</a>
+						</div>
+					</div>
+					<div class="siteInfo">
+						<span class="sitemap_tit">Rooms</span>
+						<div class="site_content">
+							<a href="" class="first_tit">The Hotel Rooms</a>
+							<a href="" class="first_tit">The Club Rooms</a>
+						</div>
+					</div>
+					<div class="siteInfo">
+						<span class="sitemap_tit">Dining</span>
+						<div class="site_content">
+							<a href="" class="first_tit">Granum Dining Lounge</a>
+							<a href="" class="first_tit">Festa Dining</a>
+							<a href="" class="first_tit">Festa Rooftop Bar</a>
+							<a href="" class="first_tit">The Club member's Restaurant</a>
+							<a href="" class="first_tit">Moon Bar</a>
+							<a href="" class="first_tit">The Member's lounge</a>
+						</div>
+					</div>
+					<div class="siteInfo">
+						<span class="sitemap_tit">Spa &amp;Recreation</span>
+						<div class="site_content">
+							<a href="" class="first_tit">Spa & Gallery</a>
+							<a href="" class="first_tit">Recreation</a>
+						</div>
+					</div>
+					<div class="siteInfo line">
+						<span class="sitemap_tit">Banquet & Wedding</span>
+						<div class="site_content">
+							<a href="" class="first_tit">Facilities</a>
+							<a href="" class="first_tit">Wedding</a>
+							<a href="" class="first_tit">Family Party </a>
+							<a href="" class="first_tit">Corporate Event</a>
+						</div>
+					</div>
+					<div class="siteInfo">
+						<span class="sitemap_tit">Promotions</span>
+						<div class="site_content">
+							<a href="" class="first_tit">Hotel Promotions </a>
+							<a href="" class="first_tit">Member Promotions</a>
+							<a href="" class="first_tit">Dining Promotions</a>
+							<a href="" class="first_tit">Gift & Vouchers</a>
+						</div>
+					</div>
+					<div class="siteInfo">
+						<span class="sitemap_tit">Club Membership</span>
+						<div class="site_content">
+							<a href="" class="first_tit">Overview</a>
+							<a href="" class="first_tit">Benefit</a>
+							<a href="" class="first_tit">Application</a>
+							<a href="" class="first_tit">Notice Board</a>
+							<a href="" class="first_tit">Download document</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer id="footer">
+			<div class="inner">
+				<h1><img src="./img/footerLogo.svg" alt=""></h1>
+				<div class="fnb">
+					<ul class="fnb_wrap">
+						<li><a href="">이용약관</a></li>
+						<li><a href="">개인정보취급방침</a></li>
+						<li><a href="">이메일무단수집금지</a></li>
+						<li><a href="">윤리정보</a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					<p class="copy_adress">에이블현대호텔앤리조트주식회사 대표이사 JANG PAUL HYUK (장혁), 최종윤<br>서울시 중구 장충단로60(장충동2가), 04605 Tel : 02.2250.8000    /    사업자 등록번호 104-81-21344 통신판매업신고번호 2012-서울중구-1214</p>
+					<p>Copyright 2016 Banyan Tree Club & Spa. All Rights Reserved</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+        //한 페이지씩 스크롤
+        $(document).ready(function () {
+        	var sc_pg = parseInt($(window).height());
+			$(window).on('mousewheel', function(e){
+				if(e.originalEvent.wheelDelta < 0) {
+					$('html, body').not(":animated").animate({
+                        scrollTop : '+='+sc_pg+'px'},1000);
+				} else {
+					$('html, body').not(":animated").animate({
+                        scrollTop : '-='+sc_pg+'px'},1000);
+				}
+				return false;
+			});
+		});
+</script>
+</html>
