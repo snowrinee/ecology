@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+	a:hover{text-decoration: underline;}
+	/*header*/
+	*{font-family: 'NanumGothic';}
+#content{width:100%;clear: both;}
+#content .company_bg{display: block; width:100%;height: 500px;background:url('./img/company_bg.jpg');background-repeat: no-repeat;background-position: center;border:1px solid #ddd;clear: both;}
+
+#content .nav_sub{width:100%;height:60px;border-bottom: 1px solid #ddd;position: relative;margin-top: -4px;}
+#content .nav_sub label{width:200px;height:100%;border-left: 1px solid #ddd;border-right: 1px solid #ddd;display: block; background:url('./img/bottom_arrow.png');background-repeat: no-repeat;background-position:175px center;box-sizing: border-box; line-height: 58px; text-indent: 20px;}
+#content .nav_sub label[for="nav_ck1"]{position:absolute;top:0;left: 400px;}
+#content .nav_sub label[for="nav_ck2"]{border-left:0; position:absolute;top: 0;left: 600px;}
+#content .nav_sub label a{color: black;}
+#content .nav_sub input{display: none;}
+#content .nav_sub a.home{width:21px;height:17px;display: block;background:url('./img/home_ico.png');background-repeat: no-repeat;background-position: center;position: absolute;top: 20px;}
+#content .nav_sub .nav_list1{height:200px; background: #133990; width:200px;position: absolute;top: 60px;z-index: 200;left: 400px;}
+#content .nav_sub li{width:100%; text-indent:20px;}
+#content .nav_sub li a{color:white;}
+#content .nav_sub .nav_list2{background: #133990; position: absolute;top: 60px;z-index: 200;left: 600px;}
+#content .nav_sub ul li{clear:both; line-height:50px;}
+#content .nav_sub ul li a{display: block; width:200px; height:50px;}
+#content .nav_sub ul li:hover{background:#0c2e7b;}
+#nav_ck1 ~ .nav_list1{display: none;}
+#nav_ck1:checked ~ .nav_list1{display:block; height:auto;}
+#nav_ck2 ~ .nav_list2{display: none;}
+#nav_ck2:checked ~ .nav_list2{display:block; height:auto;}
+	
+	
+	
+.company_info{width:100%; height:100%;}	
+.company_info .company_infoTit{font-size:20px; font-weight:500; margin-top:100px; letter-spacing: -1.2px;}
+.company_info .company_infoTit:after{content: " "; display: block; width:40px; height:3px; background-color:#233499; margin:10px 0px;}
+.company_info .company_centerTit{width:100%; text-align: center; font-family: "Gotham"; font-size:22px; font-weight:400; letter-spacing: -1.2px; margin-top:150px;}	
+.company_info .company_midTit{width:100%; text-align: center; font-size:26px; font-weight:400; margin-top:20px;}
+.company_info .recruitBox{width:1000px; margin:0px auto; margin-top:80px; }
+.company_info .recruitBox .processBox{width:100%; height:200px; }
+.company_info .recruitBox .processBox ul{}
+.company_info .recruitBox .processBox ul li{width:220px; height:80px; background:#c7a57d; float:left; border-radius: 80px; margin-right:40px; margin-top:10px;}
+.company_info .recruitBox .processBox ul li:nth-child(4n+4){ margin:0; float:right; margin-top:10px;}
+.company_info .recruitBox .processBox .process_info{text-align: center; color:#fff; box-sizing: border-box; margin:0px auto; width:140px; line-height: 80px;}
+.company_info .recruitBox .processBox .process_info.wd180{width:180px; padding-left:4px;}
+.company_info .recruitBox .processBox .process_info .info_number{font-size:16px; font-weight:500; float:left; font-family: "Arial"; }
+.company_info .recruitBox .processBox .process_info .info_tit{font-size:18px; font-weight:600; color:#262626; float:left; margin-top:-2px; margin-left:10px;}
+	
+.company_info .recruitBox .tableBox{width:100%; height:auto;}	
+.company_info .recruitBox .tableBox table{width:100%; margin:0px auto; font-size:15px;}	
+.company_info .recruitBox .tableBox table .row{background:#f4f4f4; height:80px;}
+.company_info .recruitBox .tableBox table .row:nth-child(3){height:120px; line-height: 20px;}
+.company_info .recruitBox .tableBox table .row:nth-child(5){height:100px; line-height: 20px;}
+.company_info .recruitBox .tableBox table td{border-top:1px solid #ccc; text-align: center;}
+.company_info .recruitBox .tableBox table td:nth-child(2n+2){background:#fff; text-align: left; padding-left:50px;}
+.company_info .recruitBox .moreBtn{display: block; width:250px; height:80px; background:#233499; clear:both; margin:100px auto; color:#fff; border-radius: 80px; line-height: 80px; text-align: center;}
+	
+	
+</style>
+<body>
+	<div class="wrap">
+		<header id="header">
+				<div class="gnb">
+					<h1><a href="index.html"><img src="./img/logo.png" alt="TBHGLOBAL"></a></h1>
+					<ul class="gnb_wrap">
+						<li><a href="company.html">회사소개</a>
+							<ul class="sub">
+								<li><a href="company.html">회사소개</a></li>
+								<li><a href="philosophy.html">경영이념</a></li>
+								<li><a href="notice.html">알림마당</a></li>
+								<li><a href="contactus.html">오시는길</a></li>
+							</ul>
+						</li>
+						<li><a href="csr.html">사회공헌</a>
+							<ul class="sub">
+								<li><a href="csr.html">사회공헌</a></li>
+							</ul>
+						</li>
+						<li><a href="investment.html">투자정보</a>
+							<ul class="sub">
+								<li><a href="investment.html">투자정보</a></li>
+							</ul>
+						</li>
+						<li><a href="recruit.html">인재채용</a>
+							<ul class="sub">
+								<li><a href="recruit.html">인재채용</a></li>
+							</ul>
+						</li>
+						<li><a href="community.html">미디어센터</a>
+							<ul class="sub">
+								<li><a href="community.html">미디어센터</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div class="language">
+						<select id="lang" title="select lang">
+							<option selected="selected">KOR</option>
+							<option>ENG</option>
+							<option>JPN</option>
+							<option>CHN</option>
+							<option>GER</option>
+						</select>
+					</div>
+				</div>
+
+		</header>
+		<section id="content">
+			<img src="./img/csr_bg.jpg" alt="회사사진" width="100%" height="500px" >
+			<div class="nav_sub">
+               	<div class="inner">	
+                	<a href="index.html" class="home"></a>
+					<input type="radio" name="nav_ck" id="nav_ck1">
+					<label for="nav_ck1"><a href="recruit.html">인재채용</a></label>
+					<div class="nav_list1">
+						<ul>
+							<li><a href="company.html">회사소개</a></li>
+							<li><a href="csr.html">사회공헌</a></li>
+							<li><a href="investment.html">투자정보</a></li>
+							<li><a href="community.html">미디어센터</a></li>
+						</ul>
+					</div>
+					<input type="radio" name="nav_ck" id="nav_ck2">
+					<label for="nav_ck2"><a href="recruit.html">인재채용</a></label>
+					<div class="nav_list2">
+						<ul>
+							<li><a href="recruit.html">인재채용</a></li>
+						</ul>
+					</div>
+				</div>	
+			</div>
+			<section class="company_info">
+				<div class="inner">
+					<h3 class="company_infoTit">인재채용</h3>
+					<h3 class="company_centerTit">Recruitment procedure</h3>
+					<h4 class="company_midTit">채용절차</h4>
+					<div class="recruitBox">
+						<div class="processBox">
+							<ul>
+								<li>
+									<div class="process_info">
+										<span class="info_number">STEP1</span>
+										<h4 class="info_tit">채용공고</h4>
+									</div>
+								</li>
+								<li>
+									<div class="process_info">
+										<span class="info_number">STEP2</span>
+										<h4 class="info_tit">지원접수</h4>
+									</div>
+								</li>
+								<li>
+									<div class="process_info wd180">
+										<span class="info_number">STEP3</span>
+										<h4 class="info_tit">면접·건강검진</h4>
+									</div>
+								</li>
+								<li>
+									<div class="process_info">
+										<span class="info_number">STEP4</span>
+										<h4 class="info_tit">최종합격</h4>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="tableBox">
+							<table border="0" cellspacing="0px">
+								<colgroup>
+									<col width="25%">
+									<col width="75%">
+								</colgroup>							
+								<tr class="row">
+									<td>모집인원</td>
+									<td>각 분야 결원 시</td>
+								</tr>
+								<tr class="row">
+									<td>모집시기</td>
+									<td>수시채용 (연중)</td>
+								</tr>
+								<tr class="row">
+									<td>입사지원</td>
+									<td>온라인 입사지원 : 당사 홈페이지에 입사지원서 등록<br>우편 입사지원 : (04143) 서울시마포구 마포대로 155, 16층 인사담당자<br>전화 : 02-325-7355<br>팩스 : 02-325-9805</td>
+								</tr>
+								<tr class="row">
+									<td>문의사항</td>
+									<td>채용관련 문의사항은 [ 인재채용 > 채용문의 > 채용 Q&A ] 에 등록</td>
+								</tr>
+								<tr class="row">
+									<td>제출서류</td>
+									<td>입사지원서, 졸업증명서, 성적증명서, 주민등록초본 (남자인 경우), 자격증 사본, 기타(보훈대상자 등)<br>원본 서류는 온라인 입사지원서 첨부파일로 제출되며 반환되지 않습니다.<br>
+첨부 서류는 반드시 주민등록번호를 지우고 첨부하시기 바랍니다.</td>
+								</tr>
+							</table>
+						</div>
+						<a href="#" class="moreBtn">입사지원바로가기</a>
+					</div>
+					
+				</div>
+			</section>	
+		</section>
+		<footer id="ft">
+			<div class="inner">
+				<ul class="ft_info">
+					<li><a href="#">경영이념</a></li>
+					<li><a href="#">인재채용</a></li>
+					<li><a href="#">개인정보취급처리방침</a></li>
+				</ul>
+				<ul class="adress">
+					<li>본사 : 서울특별시 강남구 봉은사로 456 (삼성동, TBH 빌딩), 우편번호: 06153</li>
+					<li>덕계공장 : 경상남도 양산시 그린공단로 38 (매곡동, 베이직하우스)</li>
+					<li>COPYRIGHT 2018 TBH GROUP ALL RIGHT RESERVED</li>
+				</ul>
+				<div class="ft_right">
+					<div class="select">
+						<select name="sitemap">
+						  <option value="FamilySite" selected="selected">패밀리사이트</option>
+						  <option value="BASICHOUSE">Basic House</option>
+						  <option value="RRIG">RRIG</option>
+						  <option value="MIND BRIDGE">MIND BRIDGE</option>
+						  <option value="THE CLASS">THE CLASS</option>
+						  <option value="JUCY JUDY">JUCY JUDY</option>
+						  <option value="MARCBRICK">MARCBRICK</option>
+						  <option value="SPELLO">SPELLO</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+		$(".gnb li").hover(function(){
+			$(".sub", this).stop().slideToggle();
+		});
+
+</script>
+</html>

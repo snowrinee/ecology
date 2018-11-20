@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+	/*header*/
+	*{font-family: 'NanumGothic';}
+#content{width:100%;clear: both;}
+#content .company_bg{display: block; width:100%;height: 500px;background:url('./img/company_bg.jpg');background-repeat: no-repeat;background-position: center;border:1px solid #ddd;clear: both;}
+
+#content .nav_sub{width:100%;height:60px;border-bottom: 1px solid #ddd; position: relative;}
+#content .nav_sub label{width:200px;height:100%;border-left: 1px solid #ddd;border-right: 1px solid #ddd;display: block; background:url('./img/bottom_arrow.png');background-repeat: no-repeat;background-position:175px center;box-sizing: border-box; line-height: 58px; text-indent: 20px;}
+#content .nav_sub label[for="nav_ck1"]{position:absolute;top:0;left: 400px;}
+#content .nav_sub label[for="nav_ck2"]{border-left:0; position:absolute;top: 0;left: 600px;}
+#content .nav_sub label a{color: black;}
+#content .nav_sub input{display: none;}
+#content .nav_sub a.home{width:21px;height:17px;display: block;background:url('./img/home_ico.png');background-repeat: no-repeat;background-position: center;position: absolute;top: 20px;}
+#content .nav_sub .nav_list1{height:200px; background: #133990; width:200px;position: absolute;top: 60px;z-index: 200;left: 400px;}
+#content .nav_sub li{width:100%; text-indent:20px;}
+#content .nav_sub li a{color:white;}
+#content .nav_sub .nav_list2{background: #133990; position: absolute;top: 60px;z-index: 200;left: 600px;}
+#content .nav_sub ul li{clear:both; line-height:50px;}
+#content .nav_sub ul li a{display: block; width:200px; height:50px;}
+#content .nav_sub ul li:hover{background:#0c2e7b;}
+#nav_ck1 ~ .nav_list1{display: none;}
+#nav_ck1:checked ~ .nav_list1{display:block; height:auto;}
+#nav_ck2 ~ .nav_list2{display: none;}
+#nav_ck2:checked ~ .nav_list2{display:block; height:auto;}
+	
+	
+	
+.company_info{width:100%; height:100%;}	
+.company_info .company_infoTit{font-size:20px; font-weight:500; margin-top:100px; letter-spacing: -1.2px;}
+.company_info .company_infoTit:after{content: " "; display: block; width:40px; height:3px; background-color:#233499; margin:10px 0px;}
+.company_info .company_centerTit{width:100%; text-align: center; font-family: "Gotham"; font-size:22px; font-weight:400; letter-spacing: -1.2px; margin-top:150px;}	
+.company_info .company_centerMidTit{width:100%; text-align: center; font-size:20px; font-weight:400; letter-spacing: -0.8px; margin-top:20px;}
+.company_info .company_centerMidTit:after{content: " "; display: block; width:70px; height:1px; background-color:#233499; margin:80px auto; transform: rotate(-45deg);}
+	
+	
+.company_info .company_ceoinfo{width:880px; height:400px; position:relative; margin:100px auto;}
+.company_info .company_ceoinfo li{float:left;}	
+.company_info .company_ceoinfo li:nth-child(1){position:absolute;width:300px;height:300px;background-color:#dddddd;top: 70px;left: 0; z-index: 1;}
+.company_info .company_ceoinfo li:nth-child(2){position:absolute; width:300px; height:300px; background-color:#e1e9f1; top:30px; left:30px; z-index: 2;}
+.company_info .company_ceoinfo li:nth-child(3){position:absolute;width:253px;height:353px;background:url('./img/ceo.png');top: -22px;left: 51px;z-index: 3;}
+.company_info .company_ceoinfo li:nth-child(4){float:right; margin-right:80px;}
+.company_info .company_ceoinfo li dl{}	
+.company_info .company_ceoinfo li dl.ceo_info{margin-top:80px;}	
+.company_info .company_ceoinfo li dl.ceo_info dt{font-size:20px; font-weight: 500;}
+.company_info .company_ceoinfo li dl.ceo_info dd{font-size:14px; font-weight: 400; line-height:32px; margin-top:10px;}
+.company_info .company_ceoinfo li dl.ceo_info dd:nth-of-type(1){font-size:17px; margin-top:20px;}
+	
+.company_info .company_ceoinfo li dl.ceo_sign{width:220px; float:right; margin-top:20px;}	
+.company_info .company_ceoinfo li dl.ceo_sign dd{font-size:16px; font-weight:500; float:left; }
+.company_info .company_ceoinfo li dl.ceo_sign dd:nth-of-type(1){margin-top:15px;}
+.company_info .company_ceoinfo li dl.ceo_sign dd:nth-of-type(2){float:right;}
+	
+.company_info .philosophy_box{width:1000px;height: 1670px; margin:0px auto;position:relative; margin-top:200px;}
+.company_info .philosophy_box img{position:absolute; display: block;}
+.company_info .philosophy_box .img1{top: 211px;left:0;}
+.company_info .philosophy_box .img2{top: 743px;right:0px;}
+.company_info .philosophy_box .img3{top:0px; right:0px;}
+.company_info .philosophy_box .img4{top: 1127px;left:0;}
+.company_info .philosophy_box .box1,.box2,.box3{position:absolute;}	
+.company_info .philosophy_box .box1{top: 801px;}
+.company_info .philosophy_box .box2{top: 450px;right: 70px;}
+.company_info .philosophy_box .box3{bottom: 159px;right: 146px;}
+.company_info .philosophy_box .box_Tit{font-family:'Gotham'; font-weight:400;}	
+.company_info .philosophy_box .box_Tit:before{content: " "; display: block; width:50px; height:1px; background-color:#233499; margin-bottom:60px; transform: rotate(-45deg); margin-left:-8px;}
+.company_info .philosophy_box .box_MidTit{font-size:15px; font-weight:400; line-height: 28px; margin-top:20px; letter-spacing: -0.8px;}	
+	
+
+</style>
+<body>
+	<div class="wrap">
+		<header id="header">
+				<div class="gnb">
+					<h1><a href="index.html"><img src="./img/logo.png" alt="TBHGLOBAL"></a></h1>
+					<ul class="gnb_wrap">
+						<li><a href="company.html">회사소개</a>
+							<ul class="sub">
+								<li><a href="company.html">회사소개</a></li>
+								<li><a href="philosophy.html">경영이념</a></li>
+								<li><a href="notice.html">알림마당</a></li>
+								<li><a href="contactus.html">오시는길</a></li>
+							</ul>
+						</li>
+						<li><a href="csr.html">사회공헌</a>
+							<ul class="sub">
+								<li><a href="csr.html">사회공헌</a></li>
+							</ul>
+						</li>
+						<li><a href="investment.html">투자정보</a>
+							<ul class="sub">
+								<li><a href="investment.html">투자정보</a></li>
+							</ul>
+						</li>
+						<li><a href="recruit.html">인재채용</a>
+							<ul class="sub">
+								<li><a href="recruit.html">인재채용</a></li>
+							</ul>
+						</li>
+						<li><a href="community.html">미디어센터</a>
+							<ul class="sub">
+								<li><a href="community.html">미디어센터</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div class="language">
+						<select id="lang" title="select lang">
+							<option selected="selected">KOR</option>
+							<option>ENG</option>
+							<option>JPN</option>
+							<option>CHN</option>
+							<option>GER</option>
+						</select>
+					</div>
+				</div>
+
+		</header>
+		<section id="content">
+			<img src="./img/company_bg.jpg" alt="회사사진" width="100%" height="500px">
+			<div class="nav_sub">
+               	<div class="inner">
+                	<a href="index.html" class="home"></a>
+					<input type="radio" name="nav_ck" id="nav_ck1">
+					<label for="nav_ck1"><a href="company.html">회사소개</a></label>
+					<div class="nav_list1">
+						<ul>
+							<li><a href="csr.html">사회공헌</a></li>
+							<li><a href="investment.html">투자정보</a></li>
+							<li><a href="recruit.html">인재채용</a></li>
+							<li><a href="community.html">미디어센</a></li>
+						</ul>
+					</div>
+					<input type="radio" name="nav_ck" id="nav_ck2">
+					<label for="nav_ck2"><a href="philosophy.html">경영이념</a></label>
+					<div class="nav_list2">
+						<ul>
+							<li><a href="company.html">회사소개</a></li>
+							<li><a href="notice.html">알림마당</a></li>
+							<li><a href="contactus.html">오시는길</a></li>
+						</ul>
+					</div>
+				</div>	
+			</div>
+			<section class="company_info">
+				<div class="inner">
+					<h3 class="company_infoTit">경영이념</h3>
+					<h3 class="company_centerTit">MANAZEMENT PHILOSOPHY</h3>
+					<h4 class="company_centerMidTit">‘사회에 공헌하고 인류를 생각하는 기업’ (주)티비에이치글로벌의 경영이념을 소개합니다.</h4>
+					<div class="philosophy_box">
+						<img src="./img/philosophy2.jpg" alt="" class="img1">
+						<div class="box1">
+							<h3 class="box_Tit">GOOD SERVICE CUSTMER</h3>
+							<p class="box_MidTit">좋은 회사란 회사가 경영을 통해 회사와 관계를 형성하는<br>
+							모든 당사자에게 지속 가능한 만족을 제공할 수 있는 회사를 말합니다.<br>
+							소비자는 더욱 가치 있는 상품과 서비스를 통해 만족을 얻어야 하며<br>
+							협력 업체와 주주는 거래와 투자를 통해 안정적인<br>
+							수익을 얻을 수 있어야 합니다.</p>
+							
+						</div>
+						<img src="./img/philosophy3.jpg" alt="" class="img2">
+						<img src="./img/philosophy1.jpg" alt="" class="img3">
+						<div class="box2">
+							<h3 class="box_Tit">FASSION CODE SHARE</h3>
+							<p class="box_MidTit">우리는이를 통해 "패션"이라는 코드를 함께공유하고자 하는<br>
+							세계 곳곳의 소비자들과 만날 수 있을 것이며 "좋은 기업"에 공감하는<br>
+							많은 파트너들과 새로운 "좋은 관계"를 형성할 수 있으리라 기대하고<br>
+							앞으로도 많은 성원 부탁드립니다.</p>
+						</div>
+						<img src="./img/philosophy4.jpg" alt="" class="img4">
+						<div class="box3">
+							<h3 class="box_Tit">NOTHING IS IMPOSSIBLE</h3>
+							<p class="box_MidTit">우리는 이를 통해 기업의 지속 가능한 성장이 실현될 수<br>
+							있다고 믿으며 지속 가능한 사회를 위한 공헌도<br>
+							가능하다 고 생각합니다.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			
+			
+			
+			
+		</section>
+		<footer id="ft">
+			<div class="inner">
+				<ul class="ft_info">
+					<li><a href="#">경영이념</a></li>
+					<li><a href="#">인재채용</a></li>
+					<li><a href="#">개인정보취급처리방침</a></li>
+				</ul>
+				<ul class="adress">
+					<li>본사 : 서울특별시 강남구 봉은사로 456 (삼성동, TBH 빌딩), 우편번호: 06153</li>
+					<li>덕계공장 : 경상남도 양산시 그린공단로 38 (매곡동, 베이직하우스)</li>
+					<li>COPYRIGHT 2018 TBH GROUP ALL RIGHT RESERVED</li>
+				</ul>
+				<div class="ft_right">
+					<div class="select">
+						<select name="sitemap">
+						  <option value="FamilySite" selected="selected">패밀리사이트</option>
+						  <option value="BASICHOUSE">Basic House</option>
+						  <option value="RRIG">RRIG</option>
+						  <option value="MIND BRIDGE">MIND BRIDGE</option>
+						  <option value="THE CLASS">THE CLASS</option>
+						  <option value="JUCY JUDY">JUCY JUDY</option>
+						  <option value="MARCBRICK">MARCBRICK</option>
+						  <option value="SPELLO">SPELLO</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+		$(".gnb li").hover(function(){
+			$(".sub", this).stop().slideToggle();
+		});
+
+</script>
+</html>
