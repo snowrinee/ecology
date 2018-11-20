@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>서울남산타워</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<header id="header">
+		<div class="inner">
+			<h1 class="logo">
+				<a href="index.html"><img src="./img/logo.png" alt=""></a>
+			</h1>
+			<ul class="gnb">
+				<li><a href="brandstory.html">남산서울타워</a></li>
+				<li><a href="tourGuide.html">투어가이드</a></li>
+				<li><a href="floorInfo.html">층별소개</a></li>
+				<li><a href="mediaCenter.html">미디어센터</a></li>
+				<li><a href="rent.html">대관안내</a></li>
+			</ul>
+			<div class="icon">
+				<a href="http://www.facebook.com/lovenseoultower" class="facebook" target="_blank">
+					<img src="./img/facebook_ico.svg" alt="페이스북">
+				</a>
+				<a href="https://www.instagram.com/namsanseoultower" target="_blank" class="instagram">
+					<img src="./img/insta_ico.svg" alt="인스타그램">
+				</a>
+				<span class="search"><img src="./img/search_ico.svg" alt="검색"></span>
+			</div>
+		</div>
+	</header>
+	<section id="main">
+		<div class="subBg">
+			<img src="./img/subBg.png" alt="남산배경" style="width:100%; height:100%;">
+		</div>
+		<div class="navWrap">
+			<ul class="inner">
+				<li class="on"><a href="brandstory.html">대관안내</a></li>
+			</ul>
+		</div>
+		<div class="contents">
+			<h3 class="intro_tit">대관안내</h3>
+		    <ul class="process">
+		    	<li>
+		    		<span class="number">01</span>
+		    		<span class="process_tit">대관문의<br>메일접수</span>
+		    	</li>
+		    	<li>
+		    		<span class="number">02</span>
+		    		<span class="process_tit">대관심의</span>
+		    	</li>
+		    	<li>
+		    		<span class="number">03</span>
+		    		<span class="process_tit">대관<br>승인통보</span>
+		    	</li>
+		    	<li>
+		    		<span class="number">04</span>
+		    		<span class="process_tit">대관계약<br>(신청서)</span>
+		    	</li>
+		    	<li>
+		    		<span class="number">05</span>
+		    		<span class="process_tit">대관료<br>납부</span>
+		    	</li>
+		    	<li>
+		    		<span class="number">06</span>
+		    		<span class="process_tit">대관준비</span>
+		    	</li>    			    			    			    			    	
+		    </ul>
+		    <h3 class="process_info">※ 대관심의 : 행사(프로모션) 취지와 남산서울타워의 이미지를 감안하고, 주최사의 진행능력을 고려하여 대관 여부를 결정합니다.</h3>
+		    <h3 class="intro_tit mg20">대관신청 및 문의</h3>
+		    <div class="mailBox">
+		    	<div class="mailCon">	
+			    	<span class="mailico"><img src="./img/email.svg" alt="멜"></span>
+			    	<span class="mail_tit">e·mail</span>
+			    	<p class="mailadress">jkkim0917@ytn.co.kr</p>
+		    	</div>
+		    </div>
+		</div>
+		
+		
+	</section>
+	<footer id="footer">
+		<div class="fnb">
+			<div class="inner">
+				<ul class="fnb_wrap">
+					<li><a href="#" class="bd0">회사소개</a></li>
+					<li><a href="#">이용약관</a></li>
+					<li><a href="#">개인정보처리방침</a></li>
+					<li><a href="#">고객센터</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="fnb_adress">
+			<div class="inner">
+				<p class="adress">04340 서울특별시 용산구 남산공원길 105 남산서울타워  대표자: 최남수  팩스: 02-756-2486  사업자등록번호: 102-81-32883</p>
+				<p class="copyright">마케팅·홍보촬영 문의: jkkim0917@ytn.co.kr<br>COPYRIGHT© NAMSAN SEOUL TOWER, ALL RIGHTS RESERVED.<br>본 사이트의 콘텐츠는 저작권법의 보호를 받는바, 무단 전재, 복사, 배포 등을 금합니다.
+				</p>
+			</div>
+		</div>
+	</footer>
+</body>
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+	function Slider(element) {
+		var self = this;
+		var el = $(element);
+		var item = el.find('.item');
+		var index = 0;
+		var current = 0;
+		var prev_btn = el.find('.prev_btn');
+		var next_btn = el.find('.next_btn');
+		var pager = $('.pager');
+		item.eq(index).css({
+			top: 0,
+			left: 0
+		});
+		prev_btn.on('click', function() {
+			if (!item.is(':animated')) {
+				self.move(-1);
+			}
+		});
+		next_btn.on('click', function() {
+			if (!item.is(':animated')) {
+				self.move(1);
+			}
+		});
+		pager.on('click', function() {
+			if (!item.is(':animated')) {
+				var pagerIndex = $(this).index();
+				if (pagerIndex > current) {
+					self.moveNext(pagerIndex);
+				} else if (pagerIndex < current) {
+					self.movePrev(pagerIndex);
+				}
+				self.activePagerItem(pagerIndex);
+			}
+		});
+		self.movePrev = function(moveIndex) {
+			item.eq(current).animate({
+				left: '100%'
+			});
+			item.eq(moveIndex).css({
+				left: '-100%'
+			}).animate({
+				left: '0'
+			});
+		}
+		self.moveNext = function(moveIndex) {
+			item.eq(current).animate({
+				left: '-100%'
+			});
+			item.eq(moveIndex).css({
+				left: '100%'
+			}).animate({
+				left: '0'
+			});
+		}
+		self.activePagerItem = function(activeIndex) {
+			pager.eq(activeIndex).addClass('active').siblings().removeClass('active');
+			item.eq(activeIndex).addClass('active').siblings().removeClass('active');
+			current = activeIndex;
+		}
+		self.move = function(dir) {
+			index = current + dir;
+			if (0 > index) {
+				index = item.length - 1;
+			}
+			if (index > item.length - 1) {
+				index = 0;
+			}
+			if (dir == -1) {
+				self.movePrev(index);
+			} else {
+				self.moveNext(index);
+			}
+			self.activePagerItem(index);
+		}
+	}
+	var slider = new Slider('.slider');
+</script>
+<script>
+	$(".navWrap > li").click(function(){
+		$(this).addClass("on");
+	});
+</script>
+</html>
